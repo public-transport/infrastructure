@@ -1,3 +1,8 @@
 # general
 .DS_Store
 *.log
+
+# terraform
+.terraform*
+*.tfvars
+*kubeconfig.yaml
