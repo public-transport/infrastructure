@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-app-ingress
+  namespace: example-app
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "certificate-issuer"
+spec:
+  tls:
+  - hosts:
+    - example-app.juliustens.eu
+    secretName: example-app-tls
+  rules:
+  - host: example-app.juliustens.eu
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: example-app
+            port:
+              number: 80
