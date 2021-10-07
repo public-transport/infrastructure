@@ -6,6 +6,9 @@ terraform {
     }
   }
   required_providers {
+    ovh = {
+      source = "ovh/ovh"
+    }
     scaleway = {
       source = "scaleway/scaleway"
     }
