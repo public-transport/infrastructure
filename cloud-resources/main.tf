@@ -9,8 +9,5 @@ terraform {
     ovh = {
       source = "ovh/ovh"
     }
-    scaleway = {
-      source = "scaleway/scaleway"
-    }
   }
 }
