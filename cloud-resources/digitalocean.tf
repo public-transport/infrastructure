@@ -4,6 +4,8 @@ provider "digitalocean" {
   token = var.digitalocean_token
 }
 
+# basic infrastructure
+
 resource "digitalocean_record" "prod_cluster_record" {
   domain = "public-transport.earth"
   type   = "A"
@@ -12,3 +14,12 @@ resource "digitalocean_record" "prod_cluster_record" {
 }
 
 # todo: ipv6 once ovh or scaleway load balancers support it
+
+# apps
+
+resource "digitalocean_record" "example_app_prod_record" {
+  domain = "public-transport.earth"
+  type   = "CNAME"
+  name   = "example-app.infra"
+  value  = "${digitalocean_record.prod_cluster_record.fqdn}."
+}

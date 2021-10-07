@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - example-app.juliustens.eu
+    - example-app.infra.public-transport.earth
     secretName: example-app-tls
   rules:
-  - host: example-app.juliustens.eu
+  - host: example-app.infra.public-transport.earth
     http:
       paths:
       - pathType: Prefix
