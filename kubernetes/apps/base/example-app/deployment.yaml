@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: example-app
-        image: publictransport/example-deployment:5c06d9e
+        image: publictransport/example-deployment:5c06d9e # {"$imagepolicy": "flux-system:example-app"}
         env:
         - name: PORT
           value: "3000"
