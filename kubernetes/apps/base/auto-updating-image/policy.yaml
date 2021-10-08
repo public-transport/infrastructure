@@ -1,21 +1,11 @@
----
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImageRepository
-metadata:
-  name: example-app
-  namespace: flux-system
-spec:
-  image: docker.io/publictransport/example-deployment
-  interval: 5m0s
----
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
 metadata:
-  name: example-app
+  name: policy
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: example-app
+    name: repository
   filterTags:
     pattern: '^v1_[a-fA-F0-9]{7}_(?P<datetime>.*)Z$'
     extract: '$datetime'

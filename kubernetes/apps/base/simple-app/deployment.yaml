@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+  selector:
+    matchLabels:
+      app: pod
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pod
+    spec:
+      containers:
+      - name: container
+        image: example/image:tag
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        ports:
+        - containerPort: 3000 # todo: make this configurable

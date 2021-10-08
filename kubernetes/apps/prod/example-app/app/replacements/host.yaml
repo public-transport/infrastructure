@@ -1,0 +1,12 @@
+# todo: move replacements to base/simple-app once that's supported.
+# unfortunately, it seems to be impossible to re-use these in kustomize for the
+# time being. you don't need to modify them per project.
+source:
+  kind: ConfigMap
+  fieldPath: metadata.annotations.host
+targets:
+  - select:
+      kind: Ingress
+    fieldPaths:
+    - spec.rules.0.host
+    - spec.tls.0.hosts.0

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service
+spec:
+  ports:
+  - port: 80
+    targetPort: 3000 # todo: make this configurable
+  selector:
+    app: deployment

@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../../base/simple-app
+# todo: move replacements to base/simple-app once that's supported.
+# unfortunately, it seems to be impossible to re-use these in kustomize for the
+# time being. you don't need to modify them per project.
+replacements:
+  - path: replacements/host.yaml
+
+namespace: example-app # change this to a unique name for your app (should match the directory name of your app in apps/prod)
+configMapGenerator:
+  - name: meta-properties
+    options:
+      disableNameSuffixHash: true
+      annotations:
+        host: 'example-app.infra.public-transport.earth' # change this to your host name
+    # add environment variables for your container here. note that until we make
+    # this configurable, YOUR CONTAINER NEEDS TO LISTEN ON PORT 3000!
+    literals:
+      - PORT=3000
+
+images:
+  - name: example/image
+    # change this to your image name (and the image policy name to '<namespace-name-you-picked-above>-policy')
+    newName: 'publictransport/example-deployment' # {"$imagepolicy": "flux-system:example-app-policy:name"}
+    # change this to your tag name (and the tag policy name to '<namespace-name-you-picked-above>-policy')
+    newTag: '852352b' # {"$imagepolicy": "flux-system:example-app-policy:tag"}

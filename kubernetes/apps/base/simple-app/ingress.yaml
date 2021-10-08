@@ -1,24 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: example-app-ingress
-  namespace: example-app
+  name: ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "certificate-issuer"
 spec:
   tls:
   - hosts:
-    - example-app.infra.public-transport.earth
-    secretName: example-app-tls
+    - some.example.domain
+    secretName: tls
   rules:
-  - host: example-app.infra.public-transport.earth
+  - host: placeholder.local # will automatically be replaced with tls.host from above
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: example-app
+            name: service
             port:
               number: 80

@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../../base/auto-updating-image
+# todo: move replacements to base/auto-updating-image once that's supported.
+# unfortunately, it seems to be impossible to re-use these in kustomize for the
+# time being. you don't need to modify them per project.
+replacements:
+  - path: replacements/image-url.yaml
+  - path: replacements/repository.yaml
+
+namePrefix: example-app- # change this to match the namespace name you picked in ../app and add a trailing '-'
+configMapGenerator:
+  - name: image-meta-properties
+    options:
+      disableNameSuffixHash: true
+      annotations:
+        imageUrl: 'docker.io/publictransport/example-deployment' # change this to your docker image's registry url
