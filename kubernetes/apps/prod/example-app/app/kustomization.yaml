@@ -9,7 +9,7 @@ replacements:
   - path: replacements/host.yaml
 namespace: example-app # change this to a unique name for your app (should match the directory name of your app in apps/prod)
 configMapGenerator:
-  - name: meta-properties
+  - name: env-and-metadata
     options:
       disableNameSuffixHash: true
       annotations:

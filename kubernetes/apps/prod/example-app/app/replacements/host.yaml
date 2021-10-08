@@ -3,6 +3,7 @@
 # time being. you don't need to modify them per project.
 source:
   kind: ConfigMap
+  name: env-and-metadata
   fieldPath: metadata.annotations.host
 targets:
   - select:

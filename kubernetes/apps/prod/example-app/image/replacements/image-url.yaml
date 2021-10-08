@@ -3,6 +3,7 @@
 # time being. you don't need to modify them per project.
 source:
   kind: ConfigMap
+  name: image-metadata
   fieldPath: metadata.annotations.imageUrl
 targets:
   - select:

@@ -11,7 +11,7 @@ replacements:
 
 namePrefix: example-app- # change this to match the namespace name you picked in ../app and add a trailing '-'
 configMapGenerator:
-  - name: image-meta-properties
+  - name: image-metadata
     options:
       disableNameSuffixHash: true
       annotations:

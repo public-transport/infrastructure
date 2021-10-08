@@ -17,6 +17,6 @@ spec:
         image: example/image:tag
         envFrom:
         - configMapRef:
-            name: postgres-config
+            name: env-and-metadata
         ports:
         - containerPort: 3000 # todo: make this configurable
