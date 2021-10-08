@@ -7,7 +7,6 @@ resources:
 # time being. you don't need to modify them per project.
 replacements:
   - path: replacements/host.yaml
-
 namespace: example-app # change this to a unique name for your app (should match the directory name of your app in apps/prod)
 configMapGenerator:
   - name: meta-properties
@@ -19,10 +18,9 @@ configMapGenerator:
     # this configurable, YOUR CONTAINER NEEDS TO LISTEN ON PORT 3000!
     literals:
       - PORT=3000
-
 images:
   - name: example/image
     # change this to your image name (and the image policy name to '<namespace-name-you-picked-above>-policy')
-    newName: 'publictransport/example-deployment' # {"$imagepolicy": "flux-system:example-app-policy:name"}
+    newName: 'docker.io/publictransport/example-deployment' # {"$imagepolicy": "flux-system:example-app-policy:name"}
     # change this to your tag name (and the tag policy name to '<namespace-name-you-picked-above>-policy')
-    newTag: '852352b' # {"$imagepolicy": "flux-system:example-app-policy:tag"}
+    newTag: 'v1_7fc61e2_2021-10-08T05.31.30Z' # {"$imagepolicy": "flux-system:example-app-policy:tag"}
