@@ -7,4 +7,4 @@ spec:
   - port: 80
     targetPort: 3000 # todo: make this configurable
   selector:
-    app: deployment
+    app: app
