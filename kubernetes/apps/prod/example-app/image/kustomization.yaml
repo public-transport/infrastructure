@@ -9,10 +9,12 @@ replacements:
   - path: replacements/image-url.yaml
   - path: replacements/repository.yaml
 
-namePrefix: example-app- # change this to match the namespace name you picked in ../app and add a trailing '-'
+# [MODIFY] change this to match the namespace name you picked in ../app and add a trailing '-', e.g. 'some-app-'
+namePrefix: example-app-
 configMapGenerator:
   - name: image-metadata
     options:
       disableNameSuffixHash: true
       annotations:
-        imageUrl: 'docker.io/publictransport/example-deployment' # change this to your docker image's registry url
+        # [MODIFY] change this to your docker image's registry url
+        imageUrl: 'docker.io/publictransport/example-deployment'
