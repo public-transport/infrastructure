@@ -1,3 +1,4 @@
+# --- GENERIC SETUP YOU DON'T NEED TO CHANGE ---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
@@ -7,20 +8,28 @@ resources:
 # time being. you don't need to modify them per project.
 replacements:
   - path: replacements/host.yaml
-namespace: example-app # change this to a unique name for your app (should match the directory name of your app in apps/prod)
+# --- CUSTOM SETTINGS YOU NEED TO ADAPT ---
+namespace: example-app # [MODIFY] change this to a unique name for your app (should match the directory name of your app in apps/prod)
 configMapGenerator:
   - name: env-and-metadata
     options:
       disableNameSuffixHash: true
       annotations:
-        host: 'example-app.infra.public-transport.earth' # change this to your host name
-    # add environment variables for your container here. note that until we make
+        host: 'example-app.infra.public-transport.earth' # [MODIFY] change this to your host name
+    # [MODIFY] add environment variables for your container below. note that until we make
     # this configurable, YOUR CONTAINER NEEDS TO LISTEN ON PORT 3000!
     literals:
       - PORT=3000
 images:
   - name: example/image
-    # change this to your image name (and the image policy name to '<namespace-name-you-picked-above>-policy')
+    # [MODIFY] change this to your image name (and the image policy name to '<namespace-name-you-picked-above>-policy')
     newName: 'docker.io/publictransport/example-deployment' # {"$imagepolicy": "flux-system:example-app-policy:name"}
-    # change this to your tag name (and the tag policy name to '<namespace-name-you-picked-above>-policy')
+    # [MODIFY] change this to your tag name (and the tag policy name to '<namespace-name-you-picked-above>-policy')
     newTag: 'v1_9631cee_2021-10-08T12.44.03Z' # {"$imagepolicy": "flux-system:example-app-policy:tag"}
+# [MODIFY] if your app needs secrets, comment out the block below and add them
+# (encrypted) in secrets/prod/<your-app>.yaml this code here only serves as a
+# stub in case no other secrets are defined (a bit of a hack, i know)
+# secretGenerator:
+#   - name: secret
+#     options:
+#       disableNameSuffixHash: true

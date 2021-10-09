@@ -18,5 +18,7 @@ spec:
         envFrom:
         - configMapRef:
             name: env-and-metadata
+        - secretRef:
+            name: secret
         ports:
         - containerPort: 3000 # todo: make this configurable
