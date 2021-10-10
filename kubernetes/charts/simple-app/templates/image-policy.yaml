@@ -1,0 +1,19 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: {{ include "app.fullName" . }}-image-policy
+  namespace: flux-system
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}-image-policy
+    helm.sh/chart: {{ include "chart.fullName" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  imageRepositoryRef:
+    name: {{ include "app.fullName" . }}-image-repository
+  filterTags:
+    pattern: {{ .Values.image.tagUpdatePattern }}
+    extract: {{ .Values.image.tagUpdateExtract }}
+  policy:
+    alphabetical:
+      order: asc

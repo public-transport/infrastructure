@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "app.fullName" . }}-deployment
+  namespace: {{ include "app.fullName" . }}
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}-deployment
+    helm.sh/chart: {{ include "chart.fullName" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ include "app.fullName" . }}
+  replicas: {{ .Values.replicas }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "app.fullName" . }}
+    spec:
+      containers:
+        - name: {{ include "app.fullName" . }}-container
+          image: "{{ .Values.image.repositoryWithRegistry }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.exposedPort }}
+          {{- if .Values.environment }}
+          env:
+          {{- range $name, $value := .Values.environment}}
+            - name: {{ $name | quote}}
+              value: {{ $value | quote }}
+          {{- end }}
+          {{- end }}
+          {{- if .Values.hasSecrets }}
+          envFrom:
+            - secretRef:
+              name: {{ include "app.fullName" . }}
+              namespace: secrets
+          {{- end }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.livenessProbe }}
+          livenessProbe:
+            httpGet:
+              path: {{ .Values.livenessProbe }}
+              port: {{ .Values.exposedPort }}
+            initialDelaySeconds: 20
+            timeoutSeconds: 5
+          {{- end }}
+          {{- if .Values.readinessProbe }}
+          readinessProbe:
+            httpGet:
+              path: {{ .Values.readinessProbe }}
+              port: {{ .Values.exposedPort }}
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+          {{- end }}

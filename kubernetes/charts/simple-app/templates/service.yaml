@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "app.fullName" . }}-service
+  namespace: {{ include "app.fullName" . }}
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}-service
+    helm.sh/chart: {{ include "chart.fullName" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  selector:
+    app: {{ include "app.fullName" . }}
+  ports:
+    - port: 80
+      targetPort: {{ .Values.exposedPort }}

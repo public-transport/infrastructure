@@ -51,3 +51,5 @@ flux bootstrap github \
 	--read-write-key \
 	--branch=main \
 	--path=kubernetes/clusters/prod
+
+echo 'if you used this script on new github repository (instead of just updating an existing setup), make sure to also create an empty branch "gh-pages", you can do so by running `git switch --orphan gh-pages && git commit --allow-empty -m "initial commit" && git push origin gh-pages`. this is required for automatic helm chart publishing.'

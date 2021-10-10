@@ -1,0 +1,40 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: example-app # [MODIFY] change this to a unique identifier for your app (should match the name of the directory this file is in)
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '0.0.0'
+  interval: 5m
+  values:
+    image:
+      # [MODIFY] change this to your docker image name (including registry), and replace "example-app" in the comment afterwards with the app identifier you picked above
+      repositoryWithRegistry: "docker.io/publictransport/example-deployment" # {"$imagepolicy": "flux-system:example-app-image-policy:name"}
+      # [MODIFY] change this to your docker tag, and replace "example-app" in the comment afterwards with the app identifier you picked above
+      tag: "881afb5" # {"$imagepolicy": "flux-system:example-app-image-policy:tag"}
+    exposedPort: 3000 # [MODIFY] change this to the port exposed by your docker container
+    environment: # [MODIFY] define all non-confidential environment variables for your container here
+      PORT: 3000
+    hosts: # [MODIFY] list your domain(s) here
+      - 'example-app.infra.public-transport.earth'
+    # [MODIFY] optional: comment out some of the settings below to change the default
+    # values for resource limits and liveness/readiness probe HTTP paths there
+    # are even more options available, these are just not documented here to
+    # keep this file as short as possible. check
+    # /kubernetes/charts/simple-app/values.yaml for a full list
+    # resources:
+    #   limits:
+    #     cpu: 200m
+    #     memory: 256Mi
+    #   requests:
+    #     cpu: 100m
+    #     memory: 128Mi
+    # livenessProbe: '/'
+    # readinessProbe: '/'

@@ -1,0 +1,34 @@
+{{- $dot := . }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "app.fullName" . }}-ingress
+  namespace: {{ include "app.fullName" . }}
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "certificate-issuer"
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}-ingress
+    helm.sh/chart: {{ include "chart.fullName" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  tls:
+    - hosts:
+      {{- range .Values.hosts }}
+        - {{ . | quote }}
+      {{- end }}
+      secretName: {{ include "app.fullName" . }}-tls
+  rules:
+  {{- range .Values.hosts }}
+    - host: {{ . | quote }}
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: {{ include "app.fullName" $dot }}-service
+                port:
+                  number: 80
+  {{- end }}

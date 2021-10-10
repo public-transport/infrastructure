@@ -1,0 +1,7 @@
+{{- define "chart.fullName" -}}
+{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
+
+{{- define "app.fullName" -}}
+{{ .Release.Name }}
+{{- end -}}

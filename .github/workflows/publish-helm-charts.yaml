@@ -1,0 +1,36 @@
+name: Publish helm charts
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.4.0
+      - name: Lint chart
+        run: |
+          helm lint kubernetes/charts/simple-app
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@main
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_SKIP_EXISTING: true
+        with:
+          charts_dir: 'kubernetes/charts'
+      - name: Display error message on failure
+        if: failure()
+        run: |
+          echo "::error::Something went wrong. Please make sure that there is an empty branch called 'gh-pages', you can create one by running `git switch --orphan gh-pages && git commit --allow-empty -m 'initial commit' && git push origin gh-pages`."
+          exit 1

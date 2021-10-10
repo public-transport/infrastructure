@@ -1,0 +1,13 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: {{ include "app.fullName" . }}-image-repository
+  namespace: flux-system
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}-image-repository
+    helm.sh/chart: {{ include "chart.fullName" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  image: {{ .Values.image.repositoryWithRegistry | quote }}
+  interval: 5m0s

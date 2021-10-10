@@ -1,0 +1,24 @@
+hasSecrets: false
+
+image:
+  repositoryWithRegistry: "docker.io/example/image"
+  tag: "latest"
+  tagUpdatePattern: '^v1_[a-fA-F0-9]{7}_(?P<datetime>.*)Z$'
+  tagUpdateExtract: '$datetime'
+
+exposedPort: 3000
+environment: {}
+
+hosts:
+  - some.example.domain
+
+replicas: 1
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+livenessProbe: '/'
+readinessProbe: '/'

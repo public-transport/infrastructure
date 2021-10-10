@@ -1,0 +1,8 @@
+# our own repo containing charts from /kubernetes/charts
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: charts
+spec:
+  interval: 1m
+  url: https://juliustens.eu/assets/repo
