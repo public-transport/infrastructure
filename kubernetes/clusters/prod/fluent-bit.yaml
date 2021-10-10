@@ -1,16 +1,16 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  name: helm-sources
+  name: fluent-bit
   namespace: flux-system
 spec:
   interval: 5m0s
   dependsOn:
-    - name: namespaces
+    - name: infra-secrets
       namespace: flux-system
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./kubernetes/sources/helm
+  path: ./kubernetes/infrastructure/fluent-bit
   prune: true
   validation: client

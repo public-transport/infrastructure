@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m0s
   dependsOn:
-    - name: secrets
+    - name: app-secrets
       namespace: flux-system
   sourceRef:
     kind: GitRepository
