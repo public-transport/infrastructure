@@ -10,7 +10,7 @@ resource "digitalocean_record" "cluster_record" {
   domain = "public-transport.earth"
   type   = "A"
   name   = "cluster.infra"
-  value  = "51.91.26.140" # todo: create load balancer with terraform and reference its ip address here instead of hardcoding (currently not supported by ovh)
+  value  = "51.91.81.181" # todo: create load balancer with terraform and reference its ip address here instead of hardcoding (currently not supported by ovh)
 }
 
 # todo: ipv6 once ovh or scaleway load balancers support it
