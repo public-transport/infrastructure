@@ -18,7 +18,7 @@ You're invited to deploy your FOSS apps on our infrastructure, under the precond
 
 Furthermore, hosting someone else's software always mandates a certain level of trust, especially for legal reasons, so these conditions should not be seen as fully exhaustive.
 
-**For a guide on how to deploy your software, check [the instructions](./kubernetes/#todo).**
+**For a guide on how to deploy your software, check [the instructions](./kubernetes/#how-can-i-deploy-my-own-app).**
 
 ## Contributing
 

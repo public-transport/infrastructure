@@ -6,10 +6,10 @@ provider "digitalocean" {
 
 # basic infrastructure
 
-resource "digitalocean_record" "prod_cluster_record" {
+resource "digitalocean_record" "cluster_record" {
   domain = "public-transport.earth"
   type   = "A"
-  name   = "prod.infra"
+  name   = "cluster.infra"
   value  = "51.91.26.140" # todo: create load balancer with terraform and reference its ip address here instead of hardcoding (currently not supported by ovh)
 }
 
@@ -17,9 +17,9 @@ resource "digitalocean_record" "prod_cluster_record" {
 
 # apps
 
-resource "digitalocean_record" "example_app_prod_record" {
+resource "digitalocean_record" "example_app_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
   name   = "example-app.infra"
-  value  = "${digitalocean_record.prod_cluster_record.fqdn}."
+  value  = "${digitalocean_record.cluster_record.fqdn}."
 }

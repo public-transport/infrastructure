@@ -14,11 +14,11 @@ spec:
       version: '>=0.0.1'
   valuesFrom:
     - kind: Secret
-      name: secret
+      name: fluent-bit-secret
       valuesKey: token
       targetPath: logzio.token
     - kind: Secret
-      name: secret
+      name: fluent-bit-secret
       valuesKey: host
       targetPath: logzio.listenerHost
   interval: 5m

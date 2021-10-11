@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: example-app # [MODIFY] change this to a unique identifier for your app (should match the name of the directory this file is in)
-  namespace: flux-system
+  namespace: app-releases
 spec:
   chart:
     spec:
@@ -28,7 +28,7 @@ spec:
     # values for resource limits and liveness/readiness probe HTTP paths there
     # are even more options available, these are just not documented here to
     # keep this file as short as possible. check
-    # /kubernetes/charts/simple-app/values.yaml for a full list
+    # /kubernetes/.charts/simple-app/values.yaml for a full list
     # resources:
     #   limits:
     #     cpu: 200m
