@@ -5,4 +5,4 @@ metadata:
   name: charts
 spec:
   interval: 1m
-  url: https://juliustens.eu/assets/repo
+  url: https://public-transport.github.io/infrastructure
