@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: logzio
         namespace: flux-system
-      version: '>=0.0.1'
+      version: '^0.0.1'
   valuesFrom:
     - kind: Secret
       name: fluent-bit-secret

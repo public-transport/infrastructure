@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '>=1.0.0'
+      version: '^1.0.0'
   interval: 5m
   values:
     image:
@@ -23,7 +23,7 @@ spec:
     environment: # [MODIFY] define all non-confidential environment variables for your container here
       PORT: 3000
     hosts: # [MODIFY] list your domain(s) here
-      - 'example-app.infra.public-transport.earth'
+      - 'example.infra.public-transport.earth'
     # [MODIFY] optional: comment out some of the settings below to change the default
     # values for resource limits and liveness/readiness probe HTTP paths there
     # are even more options available, these are just not documented here to

@@ -20,6 +20,6 @@ resource "digitalocean_record" "cluster_record" {
 resource "digitalocean_record" "example_app_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
-  name   = "example-app.infra"
+  name   = "example.infra"
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
