@@ -18,7 +18,7 @@ Ok, now back to the instructions. To deploy your app, you need to do a couple of
 
 ### In your app's repository
 
-In your app's repository, you should set up a CI task to automatically build and publish a docker image containing the latest code to a docker registry of your choice. Before publishing, the built image needs to be tagged as `v1_<first-seven-characters-of-git-commit-hash>_<date-as-YYYY-MM-DDTHH.mm.ssZ`>, so e.g. `v1_abcdef0_2021-10-08T12.44.03Z`. Instead of implementing this yourself, though, you can just refer to our **[`example-deployment`](https://github.com/public-transport/example-deployment)** and copy/adapt the `.github/workflows/ci.yaml` from there.
+In your app's repository, you should set up a CI task to automatically build and publish a docker image containing the latest code to a docker registry of your choice. Before publishing, the built image needs to be tagged as `v1_<first-seven-characters-of-git-commit-hash>_<date-as-YYYY-MM-DDTHH.mm.ssZ`>, so e.g. `v1_abcdef0_2021-10-08T12.44.03Z`. Instead of implementing this yourself, though, you can just refer to our **[`example-deployment`](https://github.com/public-transport/example-deployment)** and copy the `.github/workflows/ci.yaml` from there, which publishes to [GitHub's container registry](https://ghcr.io) out of the box, without the need for any configuration.
 
 ### In this repository
 
