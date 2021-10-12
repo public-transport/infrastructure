@@ -1,0 +1,35 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: api-direkt-bahn-guru
+  namespace: app-releases
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '^1.0.0'
+  interval: 5m
+  values:
+    image:
+      repositoryWithRegistry: "ghcr.io/juliuste/api.direkt.bahn.guru" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:name"}
+      tag: "v1_46d7c28_2021-10-12T14.32.28Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
+    exposedPort: 3000
+    environment:
+      PORT: 3000
+    hosts:
+      - 'api.direkt.bahn.guru'
+
+    # resources:
+    #   limits:
+    #     cpu: 200m
+    #     memory: 256Mi
+    #   requests:
+    #     cpu: 100m
+    #     memory: 128Mi
+
+    livenessProbe: false
+    readinessProbe: false
