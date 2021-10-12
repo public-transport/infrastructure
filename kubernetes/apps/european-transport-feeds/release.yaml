@@ -1,0 +1,34 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: european-transport-feeds
+  namespace: app-releases
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '^1.0.0'
+  interval: 5m
+  values:
+    image:
+      repositoryWithRegistry: "ghcr.io/juliuste/european-transport-feeds" # {"$imagepolicy": "flux-system:european-transport-feeds-image-policy:name"}
+      tag: "v1_b3655e1_2021-10-12T15.45.27Z" # {"$imagepolicy": "flux-system:european-transport-feeds-image-policy:tag"}
+    exposedPort: 3000
+    environment:
+      PORT: 3000
+    hosts:
+      - 'eu.data.public-transport.earth'
+
+# resources:
+#   limits:
+#     cpu: 200m
+#     memory: 256Mi
+#   requests:
+#     cpu: 100m
+#     memory: 128Mi
+# livenessProbe: '/'
+# readinessProbe: '/'
