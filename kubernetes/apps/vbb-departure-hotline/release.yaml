@@ -31,5 +31,5 @@ spec:
 #     cpu: 100m
 #     memory: 128Mi
 
-livenessProbe: false
-readinessProbe: false
+    livenessProbe: false
+    readinessProbe: false
