@@ -16,13 +16,12 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/api.direkt.bahn.guru" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:name"}
-      tag: "v1_46d7c28_2021-10-12T14.32.28Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
+      tag: "v1_48e34aa_2021-10-12T15.03.54Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
     hosts:
       - 'api.direkt.bahn.guru'
-
     # resources:
     #   limits:
     #     cpu: 200m
@@ -30,6 +29,5 @@ spec:
     #   requests:
     #     cpu: 100m
     #     memory: 128Mi
-
     livenessProbe: false
     readinessProbe: false
