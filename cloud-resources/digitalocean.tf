@@ -24,6 +24,13 @@ resource "digitalocean_record" "example_app_record" {
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
 
+resource "digitalocean_record" "european_transport_feeds_record" {
+  domain = "public-transport.earth"
+  type   = "CNAME"
+  name   = "eu.data"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
 resource "digitalocean_record" "bus_bahn_guru_record" {
   domain = "bahn.guru"
   type   = "CNAME"
