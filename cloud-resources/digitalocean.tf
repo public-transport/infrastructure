@@ -23,3 +23,17 @@ resource "digitalocean_record" "example_app_record" {
   name   = "example.infra"
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
+
+resource "digitalocean_record" "bus_bahn_guru_record" {
+  domain = "bahn.guru"
+  type   = "CNAME"
+  name   = "bus"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
+resource "digitalocean_record" "api_direkt_bahn_guru_record" {
+  domain = "bahn.guru"
+  type   = "CNAME"
+  name   = "api.direkt"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
