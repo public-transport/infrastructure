@@ -1,0 +1,16 @@
+# this reloads deployments once secrets/configmaps they reference get updated
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: reloader
+  namespace: reloader
+spec:
+  chart:
+    spec:
+      chart: reloader
+      sourceRef:
+        kind: HelmRepository
+        name: stakater
+        namespace: flux-system
+      version: '^0.0.102'
+  interval: 5m

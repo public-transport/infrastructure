@@ -5,3 +5,4 @@ resources:
   - charts.yaml
   - ingress-nginx.yaml
   - logzio.yaml
+  - stakater.yaml
