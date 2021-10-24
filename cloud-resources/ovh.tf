@@ -28,10 +28,10 @@ resource "ovh_cloud_project_kube_nodepool" "orchid_workers" {
   kube_id        = ovh_cloud_project_kube.orchid_cluster.id
   name           = "workers"
   flavor_name    = "d2-4"
-  desired_nodes  = 1
-  min_nodes      = 1
-  max_nodes      = 1
-  monthly_billed = false
+  desired_nodes  = 2
+  min_nodes      = 2
+  max_nodes      = 2
+  monthly_billed = true # THIS IS A BIT DANGEROUS, BECAUSE PODS ARE BILLED IMMEDIATELY FOR A FULL MONTH, SO PLEASE DEACTIVATE THIS WHEN EXPERIMENTING
   anti_affinity  = true
   autoscale      = false
 }
