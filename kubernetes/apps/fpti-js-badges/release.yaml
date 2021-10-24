@@ -30,5 +30,6 @@ spec:
 #   requests:
 #     cpu: 100m
 #     memory: 128Mi
-# livenessProbe: '/'
-# readinessProbe: '/'
+
+    livenessProbe: false
+    readinessProbe: false
