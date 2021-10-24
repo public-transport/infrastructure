@@ -3,6 +3,8 @@ kind: Kustomization
 resources:
   - european-transport-feeds
   - vbb-departure-hotline
+  - fpti-js-badges
+  - fptf-badges
   - api-direkt-bahn-guru
   - bus-bahn-guru
   - example-app
