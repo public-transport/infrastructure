@@ -18,7 +18,7 @@ spec:
       # [MODIFY] change this to your docker image name (including registry), and replace "example-app" in the comment afterwards with the app identifier you picked above
       repositoryWithRegistry: "ghcr.io/public-transport/example-deployment" # {"$imagepolicy": "flux-system:example-app-image-policy:name"}
       # [MODIFY] change this to your docker tag, and replace "example-app" in the comment afterwards with the app identifier you picked above
-      tag: "v1_a9f86a6_2021-10-11T14.46.02Z" # {"$imagepolicy": "flux-system:example-app-image-policy:tag"}
+      tag: "v1_99b8215_2021-10-24T07.32.12Z" # {"$imagepolicy": "flux-system:example-app-image-policy:tag"}
     exposedPort: 3000 # [MODIFY] change this to the port exposed by your docker container
     environment: # [MODIFY] define all non-confidential environment variables for your container here
       PORT: 3000
