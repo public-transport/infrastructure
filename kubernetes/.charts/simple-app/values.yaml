@@ -15,10 +15,10 @@ hosts:
 replicas: 1
 resources:
   limits:
-    cpu: 200m
-    memory: 256Mi
-  requests:
-    cpu: 100m
+    cpu: 80m
     memory: 128Mi
+  requests:
+    cpu: 40m
+    memory: 64Mi
 livenessProbe: '/'
 readinessProbe: '/'
