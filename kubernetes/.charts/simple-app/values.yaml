@@ -12,13 +12,13 @@ environment: {}
 hosts:
   - some.example.domain
 
-replicas: 1
+replicas: 2
 resources:
   limits:
-    cpu: 80m
-    memory: 128Mi
+    cpu: 100m
+    memory: 200Mi
   requests:
-    cpu: 40m
-    memory: 64Mi
+    cpu: 50m
+    memory: 100Mi
 livenessProbe: '/'
 readinessProbe: '/'
