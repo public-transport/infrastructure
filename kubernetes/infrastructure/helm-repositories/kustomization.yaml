@@ -6,3 +6,4 @@ resources:
   - ingress-nginx.yaml
   - logzio.yaml
   - stakater.yaml
+  - bitnami.yaml

@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: redis
+  namespace: redis
+spec:
+  chart:
+    spec:
+      chart: redis
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+      version: '^14.0.0'
+  values:
+    # clusterDomain: 'cluster.infra.public-transport.earth'
+    architecture: 'standalone'
+    replica:
+      replicaCount: 0
+    # auth: password: <secret>
+  interval: 5m
