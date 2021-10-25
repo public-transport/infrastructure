@@ -6,4 +6,5 @@ kind: Kustomization
 resources:
   - secrets.yaml
   - fluent-bit.yaml
+  - logzio-otel-metrics.yaml
   - app-releases.yaml
