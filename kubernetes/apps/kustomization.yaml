@@ -8,3 +8,4 @@ resources:
   - api-direkt-bahn-guru
   - bus-bahn-guru
   - example-app
+  - v5-vbb-transport-rest
