@@ -5,6 +5,7 @@ resources:
   - vbb-departure-hotline
   - fpti-js-badges
   - fptf-badges
+  - db-rest
   - api-direkt-bahn-guru
   - bus-bahn-guru
   - example-app
