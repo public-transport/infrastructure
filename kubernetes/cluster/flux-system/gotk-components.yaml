@@ -5192,7 +5192,7 @@ spec:
             memory: 1Gi
           requests:
             cpu: 100m
-            memory: 64Mi
+            memory: 128Mi
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
@@ -5265,7 +5265,7 @@ spec:
             memory: 1Gi
           requests:
             cpu: 100m
-            memory: 64Mi
+            memory: 128Mi
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
@@ -5340,7 +5340,7 @@ spec:
             memory: 1Gi
           requests:
             cpu: 100m
-            memory: 64Mi
+            memory: 128Mi
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
@@ -5419,7 +5419,7 @@ spec:
             memory: 1Gi
           requests:
             cpu: 100m
-            memory: 64Mi
+            memory: 128Mi
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
@@ -5497,7 +5497,7 @@ spec:
             memory: 1Gi
           requests:
             cpu: 100m
-            memory: 64Mi
+            memory: 128Mi
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
@@ -5575,7 +5575,7 @@ spec:
             memory: 1Gi
           requests:
             cpu: 50m
-            memory: 64Mi
+            memory: 128Mi
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
