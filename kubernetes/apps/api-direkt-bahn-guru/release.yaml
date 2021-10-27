@@ -20,6 +20,7 @@ spec:
     exposedPort: 3000
     environment:
       PORT: 3000
+      REDIS_URI: 'redis://some-password-123@redis-master.redis/1'
     hosts:
       - 'api.direkt.bahn.guru'
     # resources:
@@ -29,5 +30,5 @@ spec:
     #   requests:
     #     cpu: 100m
     #     memory: 128Mi
-    livenessProbe: false
-    readinessProbe: false
+    livenessProbe: '/health'
+    readinessProbe: '/health'
