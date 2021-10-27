@@ -19,4 +19,6 @@ spec:
       replicaCount: 0
     auth:
       password: 'some-password-123'
+    volumePermissions:
+      enabled: true
   interval: 5m
