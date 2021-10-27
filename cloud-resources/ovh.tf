@@ -35,3 +35,16 @@ resource "ovh_cloud_project_kube_nodepool" "orchid_workers" {
   anti_affinity  = true
   autoscale      = false
 }
+
+resource "ovh_cloud_project_kube_nodepool" "orchid_workerslarge" {
+  service_name   = var.ovh_project_id
+  kube_id        = ovh_cloud_project_kube.orchid_cluster.id
+  name           = "workerslarge"
+  flavor_name    = "d2-8"
+  desired_nodes  = 1
+  min_nodes      = 1
+  max_nodes      = 1
+  monthly_billed = false
+  anti_affinity  = true
+  autoscale      = false
+}
