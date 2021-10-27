@@ -23,12 +23,12 @@ spec:
       REDIS_URI: 'redis://some-password-123@redis-master.redis/1'
     hosts:
       - 'api.direkt.bahn.guru'
-    # resources:
-    #   limits:
-    #     cpu: 200m
-    #     memory: 256Mi
-    #   requests:
-    #     cpu: 100m
-    #     memory: 128Mi
+    resources:
+      limits:
+        cpu: 1000m
+        memory: 1024Mi
+      requests:
+        cpu: 500m
+        memory: 256Mi
     livenessProbe: '/health'
     readinessProbe: '/health'
