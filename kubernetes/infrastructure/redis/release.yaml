@@ -17,5 +17,6 @@ spec:
     architecture: 'standalone'
     replica:
       replicaCount: 0
-    # auth: password: <secret>
+    auth:
+      password: 'some-password-123'
   interval: 5m
