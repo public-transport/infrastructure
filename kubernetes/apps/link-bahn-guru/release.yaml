@@ -32,3 +32,6 @@ spec:
 #     memory: 128Mi
 # livenessProbe: '/'
 # readinessProbe: '/'
+
+    livenessProbe: false
+    readinessProbe: false
