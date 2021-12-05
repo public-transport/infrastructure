@@ -31,6 +31,27 @@ resource "digitalocean_record" "european_transport_feeds_record" {
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
 
+resource "digitalocean_record" "bahn_guru_record" {
+  domain = "bahn.guru"
+  type   = "A"
+  name   = "@"
+  value  = "51.91.81.181" # todo: create load balancer with terraform and reference its ip address here instead of hardcoding (currently not supported by ovh)
+}
+
+resource "digitalocean_record" "www_bahn_guru_record" {
+  domain = "bahn.guru"
+  type   = "CNAME"
+  name   = "www"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
+resource "digitalocean_record" "link_bahn_guru_record" {
+  domain = "bahn.guru"
+  type   = "CNAME"
+  name   = "link"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
 resource "digitalocean_record" "bus_bahn_guru_record" {
   domain = "bahn.guru"
   type   = "CNAME"
