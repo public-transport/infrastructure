@@ -1,0 +1,34 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: link-bahn-guru
+  namespace: app-releases
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '^1.0.0'
+  interval: 5m
+  values:
+    image:
+      repositoryWithRegistry: "ghcr.io/juliuste/link.bahn.guru" # {"$imagepolicy": "flux-system:link-bahn-guru-image-policy:name"}
+      tag: "v1_64b6316_2021-12-05t01.29.46z" # {"$imagepolicy": "flux-system:link-bahn-guru-image-policy:tag"}
+    exposedPort: 3000
+    environment:
+      PORT: 3000
+    hosts:
+      - 'link.bahn.guru'
+
+# resources:
+#   limits:
+#     cpu: 200m
+#     memory: 256Mi
+#   requests:
+#     cpu: 100m
+#     memory: 128Mi
+# livenessProbe: '/'
+# readinessProbe: '/'
