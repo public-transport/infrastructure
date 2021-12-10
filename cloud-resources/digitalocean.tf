@@ -31,6 +31,13 @@ resource "digitalocean_record" "european_transport_feeds_record" {
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
 
+resource "digitalocean_record" "umami_record" {
+  domain = "public-transport.earth"
+  type   = "CNAME"
+  name   = "developer"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
 resource "digitalocean_record" "bahn_guru_record" {
   domain = "bahn.guru"
   type   = "A"
@@ -63,5 +70,12 @@ resource "digitalocean_record" "api_direkt_bahn_guru_record" {
   domain = "bahn.guru"
   type   = "CNAME"
   name   = "api.direkt"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
+resource "digitalocean_record" "umami_bahn_guru_record" {
+  domain = "bahn.guru"
+  type   = "CNAME"
+  name   = "developer"
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
