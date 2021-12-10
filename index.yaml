@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   simple-app:
   - apiVersion: v2
+    created: "2021-12-10T22:13:59.597364217Z"
+    description: Provides a deployment, service and ingress to expose one container
+      at a given domain
+    digest: c7a5e3f9bfcc8b3f4ae651f7ccc55de9db48d54197683057fbd8bfdb5d3e6898
+    name: simple-app
+    urls:
+    - https://github.com/public-transport/infrastructure/releases/download/simple-app-1.0.4/simple-app-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
     created: "2021-10-25T18:57:39.907666681Z"
     description: Provides a deployment, service and ingress to expose one container
       at a given domain
@@ -37,4 +46,4 @@ entries:
     urls:
     - https://github.com/public-transport/infrastructure/releases/download/simple-app-1.0.0/simple-app-1.0.0.tgz
     version: 1.0.0
-generated: "2021-10-25T18:57:39.908075079Z"
+generated: "2021-12-10T22:13:59.597395119Z"
