@@ -1,4 +1,4 @@
 apiVersion: v2
 name: simple-app
-version: 1.0.5
+version: 1.0.6
 description: Provides a deployment, service and ingress to expose one container at a given domain
