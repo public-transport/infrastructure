@@ -35,8 +35,8 @@ spec:
           {{- if .Values.hasSecrets }}
           envFrom:
             - secretRef:
-              name: {{ include "app.fullName" . }}
-              namespace: secrets
+                name: {{ include "app.fullName" . }}
+                namespace: secrets
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
