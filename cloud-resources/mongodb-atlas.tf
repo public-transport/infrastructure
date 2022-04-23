@@ -29,7 +29,8 @@ resource "mongodbatlas_project" "crimson" {
 
 resource "mongodbatlas_maintenance_window" "crimson_maintenance_window" {
   project_id  = mongodbatlas_project.crimson.id
-  hour_of_day = 4
+  hour_of_day = 4 # time in UTC
+  day_of_week = 2 # monday
 }
 
 # todo: add ip allow-list here, and only allow traffic from the k8s cluster
@@ -38,7 +39,8 @@ resource "mongodbatlas_cluster" "crimson_cluster" {
   project_id = mongodbatlas_project.crimson.id
   name       = local.mongodbatlas_cluster_name
 
-  provider_name                = "AZURE"
+  provider_name                = "TENANT"
+  backing_provider_name        = "AZURE"
   provider_region_name         = "EUROPE_WEST"
   provider_instance_size_name  = "M0"
   auto_scaling_compute_enabled = false
