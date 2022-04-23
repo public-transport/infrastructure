@@ -13,3 +13,7 @@ spec:
         namespace: flux-system
       version: '^4.0.0'
   interval: 5m
+  values:
+    controller:
+      config:
+        use-forwarded-headers: true
