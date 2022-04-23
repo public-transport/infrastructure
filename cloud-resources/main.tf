@@ -16,5 +16,9 @@ terraform {
     scaleway = {
       source = "scaleway/scaleway"
     }
+    mongodbatlas = {
+      source  = "mongodb/mongodbatlas"
+      version = "~> 1.3"
+    }
   }
 }
