@@ -16,4 +16,5 @@ spec:
   values:
     controller:
       config:
+        enable-real-ip: true
         use-forwarded-headers: true
