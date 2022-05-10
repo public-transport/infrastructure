@@ -1,0 +1,35 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: echo-test
+  namespace: app-releases
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '^1.0.0'
+  interval: 5m
+  values:
+    image:
+      repositoryWithRegistry: "mendhak/http-https-echo"
+      tag: "23"
+    exposedPort: 8080
+    hosts:
+      - 'echo-test.public-transport.earth'
+
+# resources:
+#   limits:
+#     cpu: 200m
+#     memory: 256Mi
+#   requests:
+#     cpu: 100m
+#     memory: 128Mi
+# livenessProbe: '/'
+# readinessProbe: '/'
+
+    livenessProbe: false
+    readinessProbe: false

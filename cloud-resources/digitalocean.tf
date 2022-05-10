@@ -38,6 +38,13 @@ resource "digitalocean_record" "umami_record" {
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
 
+resource "digitalocean_record" "echo_test_record" {
+  domain = "public-transport.earth"
+  type   = "CNAME"
+  name   = "echo-test"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
 resource "digitalocean_record" "bahn_guru_record" {
   domain = "bahn.guru"
   type   = "A"

@@ -13,3 +13,4 @@ resources:
   - example-app
   - v5-vbb-transport-rest
   - umami
+  - echo-test
