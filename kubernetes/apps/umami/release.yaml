@@ -17,7 +17,7 @@ spec:
     hasSecrets: true
     image:
       repositoryWithRegistry: "ghcr.io/mikecao/umami"
-      tag: "postgresql-v1.30.0"
+      tag: "postgresql-v1.31.0"
     exposedPort: 3000
     environment:
       EXAMPLE: test
