@@ -12,3 +12,5 @@ We use not only one, but multiple cloud providers for our infrastructure. Most c
 | ------------------ | --------- | -------------- |
 | **[OVH](https://www.ovh.com/public-cloud)** (:fr: France) | Kubernetes cluster and workers | [docs](https://registry.terraform.io/providers/ovh/ovh/latest/docs) |
 | **[DigitalOcean](https://www.digitalocean.com/)** (:us: U.S.) | Domain(s) | [docs](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs) |
+| **[Scaleway](https://www.scaleway.com/elements/)** (:fr: France) | Relational database(s) | [docs](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs) |
+| **[MongoDB Atlas](https://www.mongodb.com/atlas)** (:us: U.S.) | Document database(s) | [docs](https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs) |
