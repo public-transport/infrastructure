@@ -16,13 +16,13 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/api.direkt.bahn.guru" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:name"}
-      tag: "v1_9edc323_2021-10-27T08.27.56Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
+      tag: "v1_23354ec_2022-05-16T00.52.29Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
       REDIS_URI: 'redis://some-password-123@redis-master.redis/1'
     hosts:
-      - 'api.direkt.bahn.guru'
+    - 'api.direkt.bahn.guru'
     resources:
       limits:
         cpu: 1000m
