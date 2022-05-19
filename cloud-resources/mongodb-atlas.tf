@@ -58,7 +58,7 @@ resource "mongodbatlas_database_user" "crimson_user" {
 
   roles {
     role_name     = "dbAdmin"
-    database_name = "example-database-todo"
+    database_name = "chore-score-bot"
   }
 
   scopes {
