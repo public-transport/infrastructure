@@ -1,7 +1,7 @@
 variable "mongodbatlas_organization_id" {}
 variable "mongodbatlas_public_key" {}
 variable "mongodbatlas_private_key" {}
-variable "mongodbatlas_db_user_password" {}
+variable "mongodbatlas_chore_score_bot_user_password" {}
 
 provider "mongodbatlas" {
   public_key  = var.mongodbatlas_public_key
@@ -50,9 +50,9 @@ resource "mongodbatlas_cluster" "crimson_cluster" {
   }
 }
 
-resource "mongodbatlas_database_user" "crimson_user" {
-  username           = "crimson-user"
-  password           = var.mongodbatlas_db_user_password
+resource "mongodbatlas_database_user" "chore_score_bot_user" {
+  username           = "chore-score-bot-user"
+  password           = var.mongodbatlas_chore_score_bot_user_password
   project_id         = mongodbatlas_project.crimson.id
   auth_database_name = "admin"
 
