@@ -33,7 +33,10 @@ resource "mongodbatlas_maintenance_window" "crimson_maintenance_window" {
   day_of_week = 2 # monday
 }
 
-# todo: add ip allow-list here, and only allow traffic from the k8s cluster
+resource "mongodbatlas_project_ip_access_list" "crimson_access_list" {
+  project_id = mongodbatlas_project.crimson.id
+  cidr_block = "0.0.0.0/0" # todo: only allow traffic from the k8s cluster
+}
 
 resource "mongodbatlas_cluster" "crimson_cluster" {
   project_id = mongodbatlas_project.crimson.id
