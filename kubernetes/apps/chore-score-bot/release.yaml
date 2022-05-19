@@ -1,0 +1,38 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: chore-score-bot
+  namespace: app-releases
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '^1.0.0'
+  interval: 5m
+  values:
+    hasSecrets: true
+    image:
+      repositoryWithRegistry: "ghcr.io/juliuste/chore-score-bot" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:name"}
+      tag: "v1_15b34cf_2022-05-19T21.41.45Z" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:tag"}
+    exposedPort: 3000
+    environment:
+      MONGODB_DATABASE: chore-score-bot
+    hosts:
+      - 'chore-score-bot.juliustens.eu' # todo: remove this
+
+    replicas: 1
+
+# resources:
+#   limits:
+#     cpu: 200m
+#     memory: 256Mi
+#   requests:
+#     cpu: 100m
+#     memory: 128Mi
+
+    livenessProbe: false
+    readinessProbe: false
