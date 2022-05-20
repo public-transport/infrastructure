@@ -64,6 +64,11 @@ resource "mongodbatlas_database_user" "chore_score_bot_user" {
     database_name = "chore-score-bot"
   }
 
+  roles {
+    role_name     = "readWrite"
+    database_name = "chore-score-bot"
+  }
+
   scopes {
     name = local.mongodbatlas_cluster_name
     type = "CLUSTER"
