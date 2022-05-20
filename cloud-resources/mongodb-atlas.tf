@@ -44,9 +44,13 @@ resource "mongodbatlas_cluster" "crimson_cluster" {
 
   provider_name                = "TENANT"
   backing_provider_name        = "AZURE"
-  provider_region_name         = "EUROPE_WEST"
-  provider_instance_size_name  = "M0"
+  provider_region_name         = "EUROPE_NORTH"
+  provider_instance_size_name  = "M2"
   auto_scaling_compute_enabled = false
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "mongodbatlas_database_user" "chore_score_bot_user" {
