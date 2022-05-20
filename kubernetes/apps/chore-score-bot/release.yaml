@@ -17,22 +17,19 @@ spec:
     hasSecrets: true
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/chore-score-bot" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:name"}
-      tag: "v1_15b34cf_2022-05-19T21.41.45Z" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:tag"}
+      tag: "v1_9ba961f_2022-05-20T12.35.12Z" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:tag"}
     exposedPort: 3000
     environment:
       MONGODB_DATABASE: chore-score-bot
     hosts:
-      - 'chore-score-bot.juliustens.eu' # todo: remove this
-
+    - 'chore-score-bot.juliustens.eu' # todo: remove this
     replicas: 1
-
-# resources:
-#   limits:
-#     cpu: 200m
-#     memory: 256Mi
-#   requests:
-#     cpu: 100m
-#     memory: 128Mi
-
+    # resources:
+    #   limits:
+    #     cpu: 200m
+    #     memory: 256Mi
+    #   requests:
+    #     cpu: 100m
+    #     memory: 128Mi
     livenessProbe: false
     readinessProbe: false
