@@ -16,14 +16,14 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/bahn.guru" # {"$imagepolicy": "flux-system:bus-bahn-guru-image-policy:name"}
-      tag: "v1_bda11c5_2021-10-12T15.03.33Z" # {"$imagepolicy": "flux-system:bus-bahn-guru-image-policy:tag"}
+      tag: "v1_0226063_2022-05-26T00.01.42Z" # {"$imagepolicy": "flux-system:bus-bahn-guru-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
       API: 'bus'
       ANALYTICS: 'true'
     hosts:
-      - 'bus.bahn.guru'
+    - 'bus.bahn.guru'
 
 # resources:
 #   limits:
