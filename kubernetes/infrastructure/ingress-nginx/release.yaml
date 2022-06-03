@@ -15,6 +15,11 @@ spec:
   interval: 5m
   values:
     controller:
+      service:
+        externalTrafficPolicy: 'Local'
+        annotations:
+          service.beta.kubernetes.io/ovh-loadbalancer-proxy-protocol: 'v2'
       config:
-        enable-real-ip: true
-        use-forwarded-headers: true
+        use-proxy-protocol: true
+        real-ip-header: 'proxy_protocol'
+        proxy-real-ip-cidr: '10.124.130.47/32,10.124.128.143/32,10.124.131.226/32,10.124.130.55/32' # cloud provider and load-balancer specific, update when re-deploying/switching the load balancer
