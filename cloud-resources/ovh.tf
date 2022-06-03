@@ -21,6 +21,10 @@ resource "ovh_cloud_project_kube" "orchid_cluster" {
   name         = "orchid"
   region       = "SBG5"
   version      = "1.22"
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "ovh_cloud_project_kube_nodepool" "orchid_workerslarge" {
