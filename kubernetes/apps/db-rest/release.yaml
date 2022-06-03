@@ -15,6 +15,7 @@ spec:
   interval: 5m
   values:
     image:
+      updateTagAutomatically: false
       repositoryWithRegistry: "docker.io/derhuerst/db-rest"
       tag: "5"
     exposedPort: 3000
