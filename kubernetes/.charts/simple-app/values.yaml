@@ -3,6 +3,7 @@ hasSecrets: false
 image:
   repositoryWithRegistry: "docker.io/example/image"
   tag: "latest"
+  updateTagAutomatically: true
   tagUpdatePattern: '^v1_[a-fA-F0-9]{7}_(?P<datetime>.*)Z$'
   tagUpdateExtract: '$datetime'
 

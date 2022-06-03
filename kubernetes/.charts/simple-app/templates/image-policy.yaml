@@ -1,3 +1,4 @@
+{{- if .Values.image.updateTagAutomatically }}
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
 metadata:
@@ -17,3 +18,4 @@ spec:
   policy:
     alphabetical:
       order: asc
+{{- end }}
