@@ -16,6 +16,7 @@ spec:
   values:
     hasSecrets: true
     image:
+      updateTagAutomatically: false
       repositoryWithRegistry: "ghcr.io/mikecao/umami"
       tag: "postgresql-v1.31.0"
     exposedPort: 3000
