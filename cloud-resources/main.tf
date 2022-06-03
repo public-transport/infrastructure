@@ -8,13 +8,15 @@ terraform {
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
-      version = "~> 2.0"
+      version = "~> 2.20"
     }
     ovh = {
       source = "ovh/ovh"
+      version = "~> 0.17.1"
     }
     scaleway = {
       source = "scaleway/scaleway"
+      version = "~> 2.2"
     }
     mongodbatlas = {
       source  = "mongodb/mongodbatlas"
