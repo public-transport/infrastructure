@@ -21,6 +21,7 @@ Some parts of our setup are not managed via terraform - sometimes because we jus
 
 - [UptimeRobot](https://uptimerobot.com/) - uptime monitoring
 - [Grafana Cloud](https://grafana.com/products/cloud) - storage and dashboards for logging, metrics, etc.
+- [DigitalOcean](https://www.digitalocean.com/) - S3 bucket(s)
 
 ## Expenses and donations
 
