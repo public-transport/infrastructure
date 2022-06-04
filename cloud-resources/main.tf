@@ -11,16 +11,20 @@ terraform {
       version = "~> 2.20"
     }
     ovh = {
-      source = "ovh/ovh"
+      source  = "ovh/ovh"
       version = "~> 0.17.1"
     }
     scaleway = {
-      source = "scaleway/scaleway"
+      source  = "scaleway/scaleway"
       version = "~> 2.2"
     }
     mongodbatlas = {
       source  = "mongodb/mongodbatlas"
       version = "~> 1.3"
+    }
+    betteruptime = {
+      source  = "BetterStackHQ/better-uptime"
+      version = "~> 0.3.12"
     }
   }
 }

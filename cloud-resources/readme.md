@@ -14,6 +14,7 @@ Most cloud providers have their own terraform plugins, these are usually quite w
 | **[DigitalOcean](https://www.digitalocean.com/)** (:us: U.S.) | Domain(s) | [docs](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs) |
 | **[Scaleway](https://www.scaleway.com/elements/)** (:fr: France) | Relational database(s) | [docs](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs) |
 | **[MongoDB Atlas](https://www.mongodb.com/atlas)** (:us: U.S.) | Document database(s) | [docs](https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs) |
+| **[Better Uptime](https://betteruptime.com)** (:us: U.S.) | Uptime monitoring ([dashboard](https://public-transport.betteruptime.com/)) | [docs](https://registry.terraform.io/providers/BetterStackHQ/better-uptime/latest/docs) |
 
 ## Other cloud providers not (yet) managed via terraform
 
