@@ -1,24 +1,22 @@
 # infrastructure
 
-This repository defines the infrastructure used for some our of projects as well as applications running on it. Following the ideas of *[Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code)* and *[GitOps](https://www.redhat.com/en/topics/devops/what-is-gitops)*, all changes to our setup should be made via PRs to this repository, they will then be applied automatically shortly after merging.
+This repository defines our shared cloud infrastructure as well as the applications running on it. Following the ideas of *[Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code)* and *[GitOps](https://www.redhat.com/en/topics/devops/what-is-gitops)*, all changes to the setup are introduced through pull requests and applied automatically after merging.
 
-## How does this work?
+## Cloud infrastructure
 
-### Cloud resources
+We use [Terraform](https://www.terraform.io/) to manage our cloud infrastructure (things such as servers, S3 buckets, databases, managed kubernetes, etc.). Check the [docs in `/cloud-resources`](./cloud-resources/) for details.
 
-We use [Terraform](https://www.terraform.io/) to manage our cloud infrastructure (things such as servers, S3 buckets, databases, etc.). Check the [docs in `/cloud-resources`](./cloud-resources/) for details.
+## Applications
 
-### Applications
+We use [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes) to run most of our applications. Check the docs in [docs in `/kubernetes`](./kubernetes/) for details.
 
-We use [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes) to run our applications. Check the docs in [docs in `/kubernetes`](./kubernetes/) for details.
-
-## How can I deploy my apps here?
+## (How) Can I deploy my apps here?
 
 You're invited to deploy your FOSS apps on our infrastructure, under the preconditions that you commit to our [code of conduct](./code-of-conduct.md) and that your apps' resource requirements aren't too demanding.
 
-Furthermore, hosting someone else's software always mandates a certain level of trust, especially for legal reasons, so these conditions should not be seen as fully exhaustive.
+Furthermore, hosting someone else's software always mandates a certain level of trust, so these conditions should not be seen as fully exhaustive.
 
-**For a guide on how to deploy your software, check [the instructions](./kubernetes/#how-can-i-deploy-my-own-app).**
+**You can find a step-by-step guide for deploying new apps on our cluster [here](./kubernetes/#how-can-i-deploy-my-own-app), and feel free to ask for help at any time! 🙂**
 
 ## Contributing
 
