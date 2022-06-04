@@ -66,6 +66,20 @@ resource "digitalocean_record" "bus_bahn_guru_record" {
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
 
+resource "digitalocean_record" "beta_bahn_guru_record" {
+  domain = "bahn.guru"
+  type   = "CNAME"
+  name   = "beta"
+  value  = "cname.vercel-dns.com."
+}
+
+resource "digitalocean_record" "direkt_bahn_guru_record" {
+  domain = "bahn.guru"
+  type   = "CNAME"
+  name   = "direkt"
+  value  = "juliuste.github.io."
+}
+
 resource "digitalocean_record" "api_direkt_bahn_guru_record" {
   domain = "bahn.guru"
   type   = "CNAME"
