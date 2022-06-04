@@ -18,6 +18,10 @@ Furthermore, hosting someone else's software always mandates a certain level of 
 
 **You can find a step-by-step guide for deploying new apps on our cluster [here](./kubernetes/#how-can-i-deploy-my-own-app), and feel free to ask for help at any time! 🙂**
 
+## Expenses and donations
+
+Our expenses and donation incomes are documented [here](./cloud-resources/expenses/readme.md).
+
 ## Contributing
 
 If you found a bug or want to propose a feature, feel free to visit [the issues page](https://github.com/public-transport/infrastructure/issues).
