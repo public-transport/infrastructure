@@ -14,10 +14,6 @@ terraform {
       source  = "ovh/ovh"
       version = "~> 0.17.1"
     }
-    scaleway = {
-      source  = "scaleway/scaleway"
-      version = "~> 2.2"
-    }
     mongodbatlas = {
       source  = "mongodb/mongodbatlas"
       version = "~> 1.3"
