@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 5m0s
   dependsOn:
-    - name: fluent-bit
+    - name: promtail
       namespace: flux-system
   sourceRef:
     kind: GitRepository

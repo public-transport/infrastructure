@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: logzio
+  name: grafana
 spec:
   interval: 30m
-  url: https://logzio.github.io/logzio-helm
+  url: https://grafana.github.io/helm-charts

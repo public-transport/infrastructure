@@ -31,13 +31,10 @@ spec:
       namespace: 'app-releases'
     - kind: HelmRelease
       name: '*'
-      namespace: 'fluent-bit'
+      namespace: 'promtail'
     - kind: HelmRelease
       name: '*'
       namespace: 'ingress-nginx'
-    - kind: HelmRelease
-      name: '*'
-      namespace: 'logzio-otel-metrics'
     - kind: HelmRelease
       name: '*'
       namespace: 'redis'
