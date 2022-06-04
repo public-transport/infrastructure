@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: postgres
+  namespace: postgres
+spec:
+  chart:
+    spec:
+      chart: postgresql
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+      version: '^11.6.3'
+  values:
+    global:
+      storageClass: 'csi-cinder-high-speed'
+      postgresql:
+        auth:
+          username: 'user'
+          database: 'public-transport'
+          existingSecret: 'postgres-secret'
+          secretKeys:
+            adminPasswordKey: 'admin-password'
+            userPasswordKey: 'user-password'
+            replicationPasswordKey: 'replication-password'
+  interval: 5m

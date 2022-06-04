@@ -40,4 +40,7 @@ spec:
       namespace: 'redis'
     - kind: HelmRelease
       name: '*'
+      namespace: 'postgres'
+    - kind: HelmRelease
+      name: '*'
       namespace: 'reloader'

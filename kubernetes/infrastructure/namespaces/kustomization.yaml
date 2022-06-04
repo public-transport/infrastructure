@@ -6,5 +6,6 @@ kind: Kustomization
 resources:
   - secrets.yaml
   - promtail.yaml
+  - postgres.yaml
   - app-releases.yaml
   # when adding namespaces here, make sure to also add them in alerts/slack-alert.yaml
