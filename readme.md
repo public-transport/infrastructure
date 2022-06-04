@@ -18,12 +18,25 @@ Furthermore, hosting someone else's software always mandates a certain level of 
 
 **You can find a step-by-step guide for deploying new apps on our cluster [here](./kubernetes/#how-can-i-deploy-my-own-app), and feel free to ask for help at any time! 🙂**
 
-## Expenses and donations
-
-Our expenses and donation incomes are documented [here](./cloud-resources/expenses/readme.md).
-
 ## Contributing
 
 If you found a bug or want to propose a feature, feel free to visit [the issues page](https://github.com/public-transport/infrastructure/issues).
 
 _Note that, by participating in this project, you commit to the [code of conduct](code-of-conduct.md), and release all contributions under the [ISC license](https://opensource.org/licenses/ISC)._
+
+## Expenses and donations
+
+Our expenses and donation incomes are documented [here](./cloud-resources/expenses/readme.md). Our projects are made possible by these great sponsors (💚):
+
+- [@AghiadHaloul](https://github.com/AghiadHaloul)
+- [@ajoga](https://github.com/ajoga)
+- [@Avanade](https://github.com/Avanade)
+- [@DerMAp](https://github.com/DerMAp)
+- [@duhovnik](https://github.com/duhovnik)
+- [@katrinleinweber](https://github.com/katrinleinweber)
+- [@mlobeck](https://github.com/mlobeck)
+- [@nyiri](https://github.com/nyiri)
+- [@ondrejsevcik](https://github.com/ondrejsevcik)
+- [@sipoh](https://github.com/sipoh)
+
+_If you donated privately, but also want to be listed here, or if you donated publicly, but don't want to be featured, reach out to [@juliuste](https://github.com/juliuste) via [email](mailto:mail@juliustens.eu)._
