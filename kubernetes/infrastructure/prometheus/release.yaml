@@ -1,0 +1,30 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: prometheus
+  namespace: prometheus
+spec:
+  chart:
+    spec:
+      chart: kube-prometheus
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+      version: '^8.0.1'
+  values:
+    prometheus:
+      remoteWrite:
+        - url: 'https://prometheus-prod-01-eu-west-0.grafana.net/api/prom/push'
+          basicAuth:
+            username:
+              name: 'prometheus-secret'
+              key: 'username'
+            password:
+              name: 'prometheus-secret'
+              key: 'password'
+    alertmanager:
+      enabled: false
+    blackboxExporter:
+      enabled: false
+  interval: 5m
