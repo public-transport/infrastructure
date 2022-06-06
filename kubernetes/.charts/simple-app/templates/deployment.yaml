@@ -47,11 +47,13 @@ spec:
             initialDelaySeconds: 20
             timeoutSeconds: 5
           {{- end }}
-          {{- if .Values.readinessProbe }}
-          readinessProbe:
+          {{- if .Values.startupProbe }}
+          startupProbe:
             httpGet:
-              path: {{ .Values.readinessProbe }}
+              path: {{ .Values.startupProbe }}
               port: {{ .Values.exposedPort }}
             initialDelaySeconds: 5
             timeoutSeconds: 5
+            periodSeconds: 5
+            failureThreshold: 20
           {{- end }}
