@@ -23,7 +23,7 @@ spec:
     environment:
       HOSTNAME: 'b.v6.db.transport.rest'
       PORT: 3000
-      # todo: REDIS_URL
+      REDIS_URL: 'redis://:some-password-123@redis.redis.svc.cluster.local:6379/2'
       NODE_ENV: 'production'
     hosts:
     - 'b.v6.db.transport.rest'
