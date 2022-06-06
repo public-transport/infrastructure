@@ -1,0 +1,38 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: v6-bvg-transport-rest
+  namespace: app-releases
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '^2.0.0'
+  interval: 5m
+  values:
+    image:
+      repositoryWithRegistry: "ghcr.io/derhuerst/bvg-rest" # {"$imagepolicy": "flux-system:v6-bvg-transport-rest-image-policy:name"}
+      tag: 'v6_461782d_2023-12-20T12.27.32Z' # {"$imagepolicy": "flux-system:v6-bvg-transport-rest-image-policy:tag"}
+      tagUpdatePattern: '^v6_[a-fA-F0-9]{7}_(?P<datetime>.*)Z$'
+      tagUpdateExtract: '$datetime'
+    exposedPort: 3000
+    environment:
+      HOSTNAME: 'b.v6.bvg.transport.rest'
+      PORT: 3000
+      # todo: REDIS_URL
+      NODE_ENV: 'production'
+    hosts:
+    - 'b.v6.bvg.transport.rest'
+    resources:
+      limits:
+        cpu: 1
+        memory: 600Mi
+      requests:
+        cpu: .3
+        memory: 220Mi
+    livenessProbe: '/health'
+    startupProbe: '/health'
