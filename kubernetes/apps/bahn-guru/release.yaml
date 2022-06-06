@@ -26,12 +26,13 @@ spec:
     - 'bahn.guru'
     - 'www.bahn.guru'
 
-# resources:
-#   limits:
-#     cpu: 200m
-#     memory: 256Mi
-#   requests:
-#     cpu: 100m
-#     memory: 128Mi
-# livenessProbe: '/'
-# readinessProbe: '/'
+resources:
+  limits:
+    cpu: 500m
+    memory: 1024Mi
+  requests:
+    cpu: 250m
+    memory: 512Mi
+
+livenessProbe: '/impressum'
+readinessProbe: '/impressum'
