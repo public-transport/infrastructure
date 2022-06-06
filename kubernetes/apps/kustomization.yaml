@@ -13,6 +13,7 @@ resources:
   - link-bahn-guru
   - example-app
   - v6-bvg-transport-rest
+  - v6-db-transport-rest
   - v6-vbb-transport-rest
   - umami
   - chore-score-bot
