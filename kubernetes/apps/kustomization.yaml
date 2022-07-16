@@ -14,3 +14,4 @@ resources:
   - v5-vbb-transport-rest
   - umami
   - chore-score-bot
+  - public-transport-data-scraper-legacy-proxy

@@ -31,6 +31,13 @@ resource "digitalocean_record" "european_transport_feeds_record" {
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
 
+resource "digitalocean_record" "proxy_test_record" {
+  domain = "public-transport.earth"
+  type   = "CNAME"
+  name   = "proxy-test.data"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
 resource "digitalocean_record" "umami_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
