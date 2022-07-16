@@ -24,10 +24,17 @@ resource "digitalocean_record" "example_app_record" {
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
 
-resource "digitalocean_record" "european_transport_feeds_record" {
+resource "digitalocean_record" "european_transport_feeds_website_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
   name   = "eu.data"
+  value  = "${digitalocean_record.cluster_record.fqdn}."
+}
+
+resource "digitalocean_record" "european_transport_feeds_data_record" {
+  domain = "public-transport.earth"
+  type   = "CNAME"
+  name   = "data"
   value  = "${digitalocean_record.cluster_record.fqdn}."
 }
 

@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: european-transport-feeds
+  name: european-transport-feeds-website
   namespace: app-releases
 spec:
   chart:
@@ -15,8 +15,8 @@ spec:
   interval: 5m
   values:
     image:
-      repositoryWithRegistry: "ghcr.io/public-transport/european-transport-feeds" # {"$imagepolicy": "flux-system:european-transport-feeds-image-policy:name"}
-      tag: "v1_e1cda9a_2022-07-16T20.53.38Z" # {"$imagepolicy": "flux-system:european-transport-feeds-image-policy:tag"}
+      repositoryWithRegistry: "ghcr.io/public-transport/european-transport-feeds-website" # {"$imagepolicy": "flux-system:european-transport-feeds-website-image-policy:name"}
+      tag: "v1_74fdf3b_2022-07-16T21.09.10Z" # {"$imagepolicy": "flux-system:european-transport-feeds-website-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
