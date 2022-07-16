@@ -21,7 +21,7 @@ spec:
     environment:
       PORT: 3000
     hosts:
-      - 'proxy-test.data.public-transport.earth'
+      - 'de.data.public-transport.earth'
       # resources:
       #   limits:
       #     cpu: 200m
