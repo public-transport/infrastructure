@@ -31,12 +31,18 @@ Our expenses and donation incomes are documented [here](./cloud-resources/expens
 - [@AghiadHaloul](https://github.com/AghiadHaloul)
 - [@ajoga](https://github.com/ajoga)
 - [@Avanade](https://github.com/Avanade)
+- [@colingdc](https://github.com/colingdc)
 - [@DerMAp](https://github.com/DerMAp)
+- [@dfkbg](https://github.com/dfkbg)
 - [@duhovnik](https://github.com/duhovnik)
+- [@EmmanuelJacobs](https://github.com/EmmanuelJacobs)
+- [@GaiusVampus](https://github.com/GaiusVampus)
+- [@ianpherbert](https://github.com/ianpherbert)
 - [@katrinleinweber](https://github.com/katrinleinweber)
 - [@mlobeck](https://github.com/mlobeck)
 - [@nyiri](https://github.com/nyiri)
 - [@ondrejsevcik](https://github.com/ondrejsevcik)
 - [@sipoh](https://github.com/sipoh)
+- [@unflores](https://github.com/unflores)
 
 _If you donated privately, but also want to be listed here, or if you donated publicly, but don't want to be featured, reach out to [@juliuste](https://github.com/juliuste) via [email](mailto:mail@juliustens.eu)._
