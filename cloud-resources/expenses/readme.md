@@ -27,3 +27,26 @@ Mapbox map tiles\* | € 120.11 | € 19.18 | € 100.93
 \*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
 
 \*\*Only includes donations made before May 19. Later payments are included in the receipt for June 2022.
+
+## June 2022
+
+### Remarks
+
+- Continued spike in public interest for [direkt.bahn.guru](https://github.com/juliuste/direkt.bahn.guru), resulting in higher operational costs, especially for map tile hosting, but also higher amount of one-time donations, helping to offset last month's deficit
+- Moved from Scaleway RDS to self-hosted (because HA isn't important for our current use case), reducing server costs
+
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 55.68 | € 8.89 | € 46.79
+Scaleway cloud costs | € 1.53 | € 0.29 | € 1.82
+MongoDB Atlas cloud costs\* | € 10.61 | € 1.69 | € 8.92
+Digitalocean cloud costs\* | € 10.48 | € 1.67 | € 8.81
+Mapbox map tiles\* | € 44.13 | € 7.05 | € 37.08
+[@juliuste Github Sponsors](https://github/sponsors/juliuste)\** | [€ -174.14](./sponsors-juliuste/june-2022.pdf) | € -27.80 | € -146.34
+**Remaining total** | - | - | **€ -42.92**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before June 19. Later payments are included in the receipt for July 2022.
