@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: v5-vbb-transport-rest
+  name: v5-db-transport-rest
   namespace: app-releases
 spec:
   chart:
@@ -11,22 +11,22 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^1.0.0'
   interval: 5m
   values:
     image:
-      repositoryWithRegistry: "ghcr.io/derhuerst/vbb-rest" # {"$imagepolicy": "flux-system:v5-vbb-transport-rest-image-policy:name"}
-      tag: 'v5_7e3d77e_2022-06-16T11.38.08Z' # {"$imagepolicy": "flux-system:v5-vbb-transport-rest-image-policy:tag"}
+      repositoryWithRegistry: "ghcr.io/derhuerst/db-rest" # {"$imagepolicy": "flux-system:v5-db-transport-rest-image-policy:name"}
+      tag: 'v5_2cdd7dc_2022-06-06t12.27.51z' # {"$imagepolicy": "flux-system:v5-db-transport-rest-image-policy:tag"}
       tagUpdatePattern: '^v5_[a-fA-F0-9]{7}_(?P<datetime>.*)Z$'
       tagUpdateExtract: '$datetime'
     exposedPort: 3000
     environment:
-      HOSTNAME: 'b.v5.vbb.transport.rest'
+      HOSTNAME: 'b.v5.db.transport.rest'
       PORT: 3000
-      REDIS_URL: 'redis://:some-password-123@redis.redis.svc.cluster.local:6379/4'
+      REDIS_URL: 'redis://:some-password-123@redis.redis.svc.cluster.local:6379/2'
       NODE_ENV: 'production'
     hosts:
-    - 'b.v5.vbb.transport.rest'
+    - 'b.v5.db.transport.rest'
     resources:
       limits:
         cpu: 1
@@ -35,4 +35,4 @@ spec:
         cpu: .3
         memory: 220Mi
     livenessProbe: '/health'
-    startupProbe: '/health'
+    readinessProbe: '/health'

@@ -13,6 +13,9 @@ resources:
   - bus-bahn-guru
   - link-bahn-guru
   - example-app
+  - v5-bvg-transport-rest
+  - v5-hvv-transport-rest
+  - v5-db-transport-rest
   - v5-vbb-transport-rest
   - umami
   - chore-score-bot
