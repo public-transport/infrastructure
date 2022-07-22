@@ -17,7 +17,7 @@ spec:
     hasSecrets: true
     image:
       updateTagAutomatically: false
-      repositoryWithRegistry: "ghcr.io/mikecao/umami"
+      repositoryWithRegistry: "ghcr.io/umami-software/umami"
       tag: "postgresql-v1.34.0"
     exposedPort: 3000
     environment:
