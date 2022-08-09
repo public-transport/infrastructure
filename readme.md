@@ -26,9 +26,10 @@ _Note that, by participating in this project, you commit to the [code of conduct
 
 ## Expenses and donations
 
-Our expenses and donation incomes are documented [here](./cloud-resources/expenses/readme.md). Our projects are made possible by these great sponsors (💚):
+Our expenses and donation incomes are documented [here](./cloud-resources/expenses/readme.md). Our projects are made possible by these great sponsors 💚:
 
 - [@AghiadHaloul](https://github.com/AghiadHaloul)
+- [@Allfein](https://github.com/Allfein)
 - [@ajoga](https://github.com/ajoga)
 - [@Avanade](https://github.com/Avanade)
 - [@colingdc](https://github.com/colingdc)
