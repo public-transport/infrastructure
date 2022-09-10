@@ -72,4 +72,26 @@ Mapbox map tiles\* | € 16.30 | € 2.60 | € 13.70
 
 \*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
 
-\*\*Only includes donations made before June 19. Later payments are included in the receipt for July 2022.
+\*\*Only includes donations made before July 19. Later payments are included in the receipt for August 2022.
+
+## August 2022
+
+### Remarks
+
+- Release of [chronotrains.com](https://chronotrains.com), resulting in a new spike of interest for [direkt.bahn.guru](https://github.com/juliuste/direkt.bahn.guru)
+
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 56.22 | € 8.98 | € 47.24
+Scaleway cloud costs | € 0.00 | € 0.00 | € 0.00
+MongoDB Atlas cloud costs\* | € 10.90 | € 1.74 | € 9.16
+Digitalocean cloud costs\* | € 5.85 | € 0.93 | € 4.92
+Mapbox map tiles\* | € 33.52 | € 5.35 | € 28.17
+[@juliuste Github Sponsors](https://github/sponsors/juliuste)\** | [€ -120.99](./sponsors-juliuste/august-2022.pdf) | € -19.32 | € -101.67
+**Remaining total** | - | - | **€ -12.18**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before August 17. Later payments are included in the receipt for September 2022.
