@@ -39,6 +39,7 @@ Our expenses and donation incomes are documented [here](./cloud-resources/expens
 - [@EmmanuelJacobs](https://github.com/EmmanuelJacobs)
 - [@GaiusVampus](https://github.com/GaiusVampus)
 - [@ianpherbert](https://github.com/ianpherbert)
+- [@jnns](https://github.com/jnns)
 - [@katrinleinweber](https://github.com/katrinleinweber)
 - [@mlobeck](https://github.com/mlobeck)
 - [@nyiri](https://github.com/nyiri)
