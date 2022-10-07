@@ -14,6 +14,7 @@ flux bootstrap github \
 	--owner=public-transport \
 	--repository=infrastructure \
 	--private \
+	--token-auth \
 	--read-write-key \
 	--branch=main \
 	--path=kubernetes/cluster
