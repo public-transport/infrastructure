@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/derhuerst/vbb-rest" # {"$imagepolicy": "flux-system:v5-vbb-transport-rest-image-policy:name"}
-      tag: 'v5_f6bd3bb_2022-09-28T16.19.46Z' # {"$imagepolicy": "flux-system:v5-vbb-transport-rest-image-policy:tag"}
+      tag: 'v5_1225403_2022-11-22T16.11.41Z' # {"$imagepolicy": "flux-system:v5-vbb-transport-rest-image-policy:tag"}
       tagUpdatePattern: '^v5_[a-fA-F0-9]{7}_(?P<datetime>.*)Z$'
       tagUpdateExtract: '$datetime'
     exposedPort: 3000
