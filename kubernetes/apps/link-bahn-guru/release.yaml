@@ -16,20 +16,18 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/link.bahn.guru" # {"$imagepolicy": "flux-system:link-bahn-guru-image-policy:name"}
-      tag: "v1_64b6316_2021-12-05T01.29.46Z" # {"$imagepolicy": "flux-system:link-bahn-guru-image-policy:tag"}
+      tag: "v1_d81080c_2022-12-03T08.03.46Z" # {"$imagepolicy": "flux-system:link-bahn-guru-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
     hosts:
       - 'link.bahn.guru'
-
-# resources:
-#   limits:
-#     cpu: 200m
-#     memory: 256Mi
-#   requests:
-#     cpu: 100m
-#     memory: 128Mi
-
+      # resources:
+      #   limits:
+      #     cpu: 200m
+      #     memory: 256Mi
+      #   requests:
+      #     cpu: 100m
+      #     memory: 128Mi
     livenessProbe: false
     startupProbe: false
