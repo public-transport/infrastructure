@@ -95,3 +95,63 @@ Mapbox map tiles\* | € 33.52 | € 5.35 | € 28.17
 \*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
 
 \*\*Only includes donations made before August 17. Later payments are included in the receipt for September 2022.
+
+## September 2022
+
+### Remarks
+
+- Received a one-time $10 credit on DigitalOcean, reducing cost for this and next month.
+
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 55.78 | € 8.91 | € 46.87
+Scaleway cloud costs | € 0.00 | € 0.00 | € 0.00
+MongoDB Atlas cloud costs\* | € 10.07 | € 1.61 | € 8.46
+Digitalocean cloud costs | € 0.00 | € 0.00 | € 0.00
+Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
+[@juliuste Github Sponsors](https://github/sponsors/juliuste)\** | [€ -38.83](./sponsors-juliuste/september-2022.pdf) | € -6.20 | € -32.63
+**Remaining total** | - | - | **€ 22.70**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before September 19. Later payments are included in the receipt for October 2022.
+
+## October 2022
+
+- Received a one-time $10 credit on DigitalOcean last month, also reducing this month's cost.
+
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 60.52 | € 9.66 | € 50.86
+Scaleway cloud costs | € 0.00 | € 0.00 | € 0.00
+MongoDB Atlas cloud costs\* | € 10.41 | € 1.66 | € 8.75
+Digitalocean cloud costs\* | € 1.40 | € 0.22 | € 1.18
+Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
+[@juliuste Github Sponsors](https://github/sponsors/juliuste)\** | [€ -39.83](./sponsors-juliuste/october-2022.pdf) | € -6.36 | € -33.47
+**Remaining total** | - | - | **€ 27.32**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before October 19. Later payments are included in the receipt for November 2022.
+
+## November 2022
+
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 60.24 | € 9.62 | € 50.62
+Scaleway cloud costs | € 0.00 | € 0.00 | € 0.00
+MongoDB Atlas cloud costs\* | € 10.07 | € 1.61 | € 8.46
+Digitalocean cloud costs\* | € 5.59 | € 0.89 | € 4.70
+Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
+[@juliuste Github Sponsors](https://github/sponsors/juliuste)\** | [€ -112.15](./sponsors-juliuste/november-2022.pdf) | € -17.91 | € -94.24
+**Remaining total** | - | - | **€ -30.46**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before November 20. Later payments are included in the receipt for December 2022.
