@@ -8,19 +8,19 @@ terraform {
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
-      version = "~> 2.20"
+      version = "~> 2.25"
     }
     ovh = {
       source  = "ovh/ovh"
-      version = "~> 0.17.1"
+      version = "~> 0.26.0"
     }
     mongodbatlas = {
       source  = "mongodb/mongodbatlas"
-      version = "~> 1.3"
+      version = "~> 1.6"
     }
     betteruptime = {
       source  = "BetterStackHQ/better-uptime"
-      version = "~> 0.3.12"
+      version = "~> 0.3.14"
     }
   }
 }
