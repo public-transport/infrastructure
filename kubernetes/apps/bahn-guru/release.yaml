@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/bahn.guru" # {"$imagepolicy": "flux-system:bahn-guru-image-policy:name"}
-      tag: "v1_88ed4aa_2023-01-23T14.40.48Z" # {"$imagepolicy": "flux-system:bahn-guru-image-policy:tag"}
+      tag: "v1_5e06a0d_2023-01-24T08.14.42Z" # {"$imagepolicy": "flux-system:bahn-guru-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
