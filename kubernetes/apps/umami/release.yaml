@@ -18,10 +18,9 @@ spec:
     image:
       updateTagAutomatically: false
       repositoryWithRegistry: "ghcr.io/umami-software/umami"
-      tag: "postgresql-v1.37.0"
+      tag: "postgresql-v1.40.0"
     exposedPort: 3000
-    environment:
-      EXAMPLE: test
+    environment: {}
     hosts:
       - 'developer.public-transport.earth'
       - 'developer.bahn.guru'
