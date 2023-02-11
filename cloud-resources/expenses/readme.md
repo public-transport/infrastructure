@@ -12,4 +12,18 @@ To provide transparency regarding the usage of these donations, I will hencefort
 
 ## January 2023
 
-_Coming soon._
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 60.68 | € 9.69 | € 50.99
+Scaleway cloud costs | € 0.00 | € 0.00 | € 0.00
+MongoDB Atlas cloud costs\* | € 10.34 | € 1.65 | € 8.69
+Digitalocean cloud costs\* | € 5.56 | € 0.89 | € 4.67
+Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
+[@juliuste Github Sponsors](https://github.com/sponsors/juliuste)\** | [€ -46.88](./sponsors-juliuste/january-2023.pdf) | € -7.49 | € -39.39
+**Remaining total** | - | - | **€ 24.96**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before January 19. Later payments are included in the receipt for February 2023.
