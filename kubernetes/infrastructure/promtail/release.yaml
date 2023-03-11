@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: flux-system
-      version: '^5.0.0'
+      version: '^6.9.3'
   valuesFrom:
     - kind: Secret
       name: promtail-secret
