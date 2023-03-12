@@ -4,6 +4,5 @@ namespace: flux-system
 resources:
   - charts.yaml
   - ingress-nginx.yaml
-  - grafana.yaml
   - stakater.yaml
   - bitnami.yaml

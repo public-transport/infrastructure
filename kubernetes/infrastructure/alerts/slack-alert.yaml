@@ -31,12 +31,6 @@ spec:
       namespace: 'app-releases'
     - kind: HelmRelease
       name: '*'
-      namespace: 'promtail'
-    - kind: HelmRelease
-      name: '*'
-      namespace: 'prometheus'
-    - kind: HelmRelease
-      name: '*'
       namespace: 'ingress-nginx'
     - kind: HelmRelease
       name: '*'
