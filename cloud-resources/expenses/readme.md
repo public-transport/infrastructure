@@ -45,3 +45,21 @@ Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
 \*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
 
 \*\*Only includes donations made before February 20. Later payments are included in the receipt for March 2023.
+
+## March 2023
+
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 60.68 | € 9.69 | € 50.99
+Scaleway cloud costs | € 0.00 | € 0.00 | € 0.00
+MongoDB Atlas cloud costs\* | € 10.19 | € 1.63 | € 8.56
+Digitalocean cloud costs\* | € 5.47 | € 0.87 | € 4.60
+Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
+[@juliuste Github Sponsors](https://github.com/sponsors/juliuste)\** | [€ -50.71](./sponsors-juliuste/march-2023.pdf) | € -8.10 | € -42.61
+**Remaining total** | - | - | **€ 21.54**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before March 20. Later payments are included in the receipt for April 2023.
