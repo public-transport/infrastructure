@@ -65,7 +65,7 @@ resource "mongodbatlas_serverless_instance" "crimson_serverless" {
   name       = local.mongodbatlas_serverless_name
 
   provider_settings_backing_provider_name = "AZURE"
-  provider_settings_region_name           = "WESTEUROPE"
+  provider_settings_region_name           = "EUROPE_WEST"
   provider_settings_provider_name         = "SERVERLESS"
   continuous_backup_enabled               = true
   termination_protection_enabled          = true
