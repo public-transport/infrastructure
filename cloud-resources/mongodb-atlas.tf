@@ -56,7 +56,7 @@ resource "mongodbatlas_cluster" "crimson_cluster" {
   auto_scaling_compute_enabled = false
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
