@@ -9,14 +9,7 @@ provider "mongodbatlas" {
 }
 
 locals {
-  mongodbatlas_cluster_name    = "crimson-cluster"
   mongodbatlas_serverless_name = "crimson-serverless"
-}
-
-# you can retrieve the base database uri by running `terraform output --raw crimson_cluster_uri`
-output "crimson_cluster_uri" {
-  value     = mongodbatlas_cluster.crimson_cluster.mongo_uri_with_options
-  sensitive = true
 }
 
 # you can retrieve the base database uri by running `terraform output --raw crimson_serverless_uri`
@@ -43,21 +36,6 @@ resource "mongodbatlas_maintenance_window" "crimson_maintenance_window" {
 resource "mongodbatlas_project_ip_access_list" "crimson_access_list" {
   project_id = mongodbatlas_project.crimson.id
   cidr_block = "0.0.0.0/0" # todo: only allow traffic from the k8s cluster
-}
-
-resource "mongodbatlas_cluster" "crimson_cluster" {
-  project_id = mongodbatlas_project.crimson.id
-  name       = local.mongodbatlas_cluster_name
-
-  provider_name                = "TENANT"
-  backing_provider_name        = "AZURE"
-  provider_region_name         = "EUROPE_NORTH"
-  provider_instance_size_name  = "M2"
-  auto_scaling_compute_enabled = false
-
-  lifecycle {
-    prevent_destroy = false
-  }
 }
 
 resource "mongodbatlas_serverless_instance" "crimson_serverless" {
@@ -89,11 +67,6 @@ resource "mongodbatlas_database_user" "chore_score_bot_user" {
   roles {
     role_name     = "readWrite"
     database_name = "chore-score-bot"
-  }
-
-  scopes {
-    name = local.mongodbatlas_cluster_name
-    type = "CLUSTER"
   }
 
   scopes {
