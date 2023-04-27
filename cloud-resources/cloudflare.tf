@@ -33,6 +33,18 @@ resource "cloudflare_zone" "pricemap_eu" {
   plan = "free"
 }
 
+resource "cloudflare_zone_dnssec" "railway_guru_dnssec" {
+  zone_id = cloudflare_zone.railway_guru.id
+}
+
+resource "cloudflare_zone_dnssec" "umsteigen_jetzt_dnssec" {
+  zone_id = cloudflare_zone.umsteigen_jetzt.id
+}
+
+resource "cloudflare_zone_dnssec" "pricemap_eu_dnssec" {
+  zone_id = cloudflare_zone.pricemap_eu.id
+}
+
 resource "cloudflare_record" "railway_guru_root" {
   zone_id = cloudflare_zone.railway_guru.id
   type = "CNAME"
