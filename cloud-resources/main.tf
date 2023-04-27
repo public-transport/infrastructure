@@ -22,5 +22,9 @@ terraform {
       source  = "BetterStackHQ/better-uptime"
       version = "~> 0.3.14"
     }
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "~> 4.4.0"
+    }
   }
 }
