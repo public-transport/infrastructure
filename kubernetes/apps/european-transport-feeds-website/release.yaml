@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/public-transport/european-transport-feeds-website" # {"$imagepolicy": "flux-system:european-transport-feeds-website-image-policy:name"}
-      tag: "v1_cee9b38_2023-05-01T13.25.00Z" # {"$imagepolicy": "flux-system:european-transport-feeds-website-image-policy:tag"}
+      tag: "v1_76ae8b6_2023-05-02T00.41.53Z" # {"$imagepolicy": "flux-system:european-transport-feeds-website-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
