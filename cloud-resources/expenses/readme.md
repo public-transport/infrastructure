@@ -63,3 +63,25 @@ Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
 \*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
 
 \*\*Only includes donations made before March 20. Later payments are included in the receipt for April 2023.
+
+## April 2023
+
+### Remarks
+
+- Switched to Serverless MongoDB Atlas, which costs much less/nothing (starting next month)
+
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 60.24 | € 9.62 | € 50.62
+Scaleway cloud costs | € 0.00 | € 0.00 | € 0.00
+MongoDB Atlas cloud costs\* | € 8.52 | € 1.36 | € 7.16
+Digitalocean cloud costs\* | € 5.45 | € 0.87 | € 4.58
+Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
+[@juliuste Github Sponsors](https://github.com/sponsors/juliuste)\** | [€ -33.72](./sponsors-juliuste/april-2023.pdf) | € -5.38 | € -28.34
+**Remaining total** | - | - | **€ 34.02**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before April 19. Later payments are included in the receipt for May 2023.
