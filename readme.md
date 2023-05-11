@@ -57,9 +57,13 @@ Our expenses and donation incomes are documented [here](./cloud-resources/expens
 - [@nyiri](https://github.com/nyiri)
 - [@odannis](https://github.com/odannis)
 - [@ondrejsevcik](https://github.com/ondrejsevcik)
+- [@paKS7](https://github.com/paKS7)
+- [@PatrickAel](https://github.com/PatrickAel)
 - [@sipoh](https://github.com/sipoh)
+- [@Slot1986](https://github.com/Slot1986)
 - [@spkrn](https://github.com/spkrn)
 - [@suiluj](https://github.com/suiluj)
+- [@thibaultmol](https://github.com/thibaultmol)
 - [@unflores](https://github.com/unflores)
 
 _If you donated privately, but also want to be listed here, or if you donated publicly, but don't want to be featured, reach out to [@juliuste](https://github.com/juliuste) via [email](mailto:mail@juliustens.eu)._
