@@ -85,3 +85,24 @@ Mapbox map tiles | € 0.00 | € 0.00 | € 0.00
 \*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
 
 \*\*Only includes donations made before April 19. Later payments are included in the receipt for May 2023.
+
+## May 2023
+
+### Remarks
+
+- Increased Mapbox costs due to spike in interest for [direkt.bahn.guru](https://direkt.bahn.guru), probably related to Germany's 49 euro ticket
+
+### List of expenses
+
+Item | Value (incl. VAT) | VAT | Value
+---- | ----------------- | --- | -----
+OVH cloud costs | € 60.68 | € 9.69 | € 50.99
+MongoDB Atlas cloud costs\* | € 0.00 | € 0.00 | € 0.00
+Digitalocean cloud costs\* | € 5.44 | € 0.87 | € 4.57
+Mapbox map tiles | € 16.33 | € 2.61 | € 13.72
+[@juliuste Github Sponsors](https://github.com/sponsors/juliuste)\** | [€ -30.88](./sponsors-juliuste/may-2023.pdf) | € -4.93 | € -25.95
+**Remaining total** | - | - | **€ 43.33**
+
+\*Payment made in USD, value in EUR was calculated at the time of documenting the expenses and might be slightly off.
+
+\*\*Only includes donations made before May 17. Later payments are included in the receipt for June 2023.
