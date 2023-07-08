@@ -25,6 +25,8 @@ spec:
     hosts:
     - 'bahn.guru'
     - 'www.bahn.guru'
+    - 'railway.guru'
+    - 'www.railway.guru'
     resources:
       limits:
         cpu: 500m
