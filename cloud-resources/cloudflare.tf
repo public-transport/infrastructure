@@ -79,11 +79,27 @@ resource "cloudflare_record" "bahn_guru_direkt" {
   proxied = true
 }
 
+resource "cloudflare_record" "bahn_guru_direkt_subdomains" {
+  zone_id = cloudflare_zone.bahn_guru.id
+  type = "CNAME"
+  name = "*.direkt"
+  value = local.cluster_domain
+  proxied = true
+}
+
 resource "cloudflare_record" "bahn_guru_beta" {
   zone_id = cloudflare_zone.bahn_guru.id
   type = "CNAME"
   name = "beta"
   value = "cname.vercel-dns.com"
+  proxied = true
+}
+
+resource "cloudflare_record" "bahn_guru_beta_subdomains" {
+  zone_id = cloudflare_zone.bahn_guru.id
+  type = "CNAME"
+  name = "*.beta"
+  value = local.cluster_domain
   proxied = true
 }
 
