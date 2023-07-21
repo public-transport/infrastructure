@@ -17,7 +17,7 @@ spec:
     hasSecrets: true
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/chore-score-bot" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:name"}
-      tag: "v1_428b3d0_2023-07-21T19.37.09Z" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:tag"}
+      tag: "v1_514ed3f_2023-07-21T19.47.48Z" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:tag"}
     exposedPort: 3000
     environment:
       MONGODB_DATABASE: chore-score-bot
