@@ -13,34 +13,34 @@ provider "cloudflare" {
 
 resource "cloudflare_zone" "bahn_guru" {
   account_id = var.cloudflare_account_id
-  zone = "bahn.guru"
+  zone       = "bahn.guru"
   jump_start = false
-  paused = true
-  plan = "free"
+  paused     = true
+  plan       = "free"
 }
 
 resource "cloudflare_zone" "railway_guru" {
   account_id = var.cloudflare_account_id
-  zone = "railway.guru"
+  zone       = "railway.guru"
   jump_start = false
-  paused = true
-  plan = "free"
+  paused     = true
+  plan       = "free"
 }
 
 resource "cloudflare_zone" "umsteigen_jetzt" {
   account_id = var.cloudflare_account_id
-  zone = "umsteigen.jetzt"
+  zone       = "umsteigen.jetzt"
   jump_start = false
-  paused = true
-  plan = "free"
+  paused     = true
+  plan       = "free"
 }
 
 resource "cloudflare_zone" "pricemap_eu" {
   account_id = var.cloudflare_account_id
-  zone = "pricemap.eu"
+  zone       = "pricemap.eu"
   jump_start = false
-  paused = true
-  plan = "free"
+  paused     = true
+  plan       = "free"
 }
 
 # dnssec
@@ -65,49 +65,49 @@ resource "cloudflare_zone_dnssec" "pricemap_eu_dnssec" {
 
 resource "cloudflare_record" "bahn_guru_root" {
   zone_id = cloudflare_zone.bahn_guru.id
-  type = "CNAME"
-  name = "@"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "@"
+  value   = local.cluster_domain
   proxied = true
 }
 
 resource "cloudflare_record" "bahn_guru_direkt" {
   zone_id = cloudflare_zone.bahn_guru.id
-  type = "CNAME"
-  name = "direkt"
-  value = "juliuste.github.io"
+  type    = "CNAME"
+  name    = "direkt"
+  value   = "juliuste.github.io"
   proxied = true
 }
 
 resource "cloudflare_record" "bahn_guru_direkt_subdomains" {
   zone_id = cloudflare_zone.bahn_guru.id
-  type = "CNAME"
-  name = "*.direkt"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "*.direkt"
+  value   = local.cluster_domain
   proxied = true
 }
 
 resource "cloudflare_record" "bahn_guru_beta" {
   zone_id = cloudflare_zone.bahn_guru.id
-  type = "CNAME"
-  name = "beta"
-  value = "cname.vercel-dns.com"
+  type    = "CNAME"
+  name    = "beta"
+  value   = "cname.vercel-dns.com"
   proxied = true
 }
 
 resource "cloudflare_record" "bahn_guru_beta_subdomains" {
   zone_id = cloudflare_zone.bahn_guru.id
-  type = "CNAME"
-  name = "*.beta"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "*.beta"
+  value   = local.cluster_domain
   proxied = true
 }
 
 resource "cloudflare_record" "bahn_guru_subdomains" {
   zone_id = cloudflare_zone.bahn_guru.id
-  type = "CNAME"
-  name = "*"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "*"
+  value   = local.cluster_domain
   proxied = true
 }
 
@@ -115,17 +115,17 @@ resource "cloudflare_record" "bahn_guru_subdomains" {
 
 resource "cloudflare_record" "railway_guru_root" {
   zone_id = cloudflare_zone.railway_guru.id
-  type = "CNAME"
-  name = "@"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "@"
+  value   = local.cluster_domain
   proxied = true
 }
 
 resource "cloudflare_record" "railway_guru_subdomains" {
   zone_id = cloudflare_zone.railway_guru.id
-  type = "CNAME"
-  name = "*"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "*"
+  value   = local.cluster_domain
   proxied = true
 }
 
@@ -133,17 +133,17 @@ resource "cloudflare_record" "railway_guru_subdomains" {
 
 resource "cloudflare_record" "umsteigen_jetzt_root" {
   zone_id = cloudflare_zone.umsteigen_jetzt.id
-  type = "CNAME"
-  name = "@"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "@"
+  value   = local.cluster_domain
   proxied = true
 }
 
 resource "cloudflare_record" "umsteigen_jetzt_subdomains" {
   zone_id = cloudflare_zone.umsteigen_jetzt.id
-  type = "CNAME"
-  name = "*"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "*"
+  value   = local.cluster_domain
   proxied = true
 }
 
@@ -151,16 +151,16 @@ resource "cloudflare_record" "umsteigen_jetzt_subdomains" {
 
 resource "cloudflare_record" "pricemap_eu_root" {
   zone_id = cloudflare_zone.pricemap_eu.id
-  type = "CNAME"
-  name = "@"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "@"
+  value   = local.cluster_domain
   proxied = true
 }
 
 resource "cloudflare_record" "pricemap_eu_subdomains" {
   zone_id = cloudflare_zone.pricemap_eu.id
-  type = "CNAME"
-  name = "*"
-  value = local.cluster_domain
+  type    = "CNAME"
+  name    = "*"
+  value   = local.cluster_domain
   proxied = true
 }
