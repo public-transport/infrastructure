@@ -53,7 +53,7 @@ module "kube-hetzner" {
   # ingress_controller = "nginx"
 
   # todo
-  # restrict_outbound_traffic = false
+  restrict_outbound_traffic = false
 
   # todo
   # firewall_kube_api_source = null
