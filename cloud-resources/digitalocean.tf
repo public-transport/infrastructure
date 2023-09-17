@@ -15,6 +15,20 @@ resource "digitalocean_record" "cluster_record" {
 
 # todo: ipv6 once ovh or scaleway load balancers support it
 
+resource "digitalocean_record" "tilia_cluster_record_v4" {
+  domain = "public-transport.earth"
+  type   = "A"
+  name   = "tilia.cluster.infra"
+  value  = module.kube-hetzner.ingress_public_ipv4
+}
+
+resource "digitalocean_record" "tilia_cluster_record_v6" {
+  domain = "public-transport.earth"
+  type   = "AAAA"
+  name   = "tilia.cluster.infra"
+  value  = module.kube-hetzner.ingress_public_ipv6
+}
+
 # apps
 
 resource "digitalocean_record" "example_app_record" {
