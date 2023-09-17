@@ -29,7 +29,15 @@ terraform {
     }
     hcloud = {
       source  = "hetznercloud/hcloud"
-      version = ">= 1.41.0"
+      version = "~> 1.42.0"
+    }
+    flux = {
+      source  = "fluxcd/flux"
+      version = "~> 1.1.0"
+    }
+    github = {
+      source  = "integrations/github"
+      version = "~> 5.37.0"
     }
   }
 }
