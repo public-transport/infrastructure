@@ -6,7 +6,7 @@ provider "hcloud" {
   token = var.hetzner_cloud_token
 }
 
-output "kubeconfig" {
+output "tilia_kubeconfig" {
   value     = module.kube-hetzner.kubeconfig
   sensitive = true
 }
