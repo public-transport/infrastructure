@@ -20,7 +20,7 @@ resource "ovh_cloud_project_kube" "orchid_cluster" {
   service_name = var.ovh_project_id
   name         = "orchid"
   region       = "SBG5"
-  version      = "1.26"
+  version      = "1.27"
 
   lifecycle {
     prevent_destroy = true
