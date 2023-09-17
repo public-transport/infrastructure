@@ -5,6 +5,7 @@ terraform {
       name = "infrastructure"
     }
   }
+  required_version = ">= 1.4.0"
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
@@ -25,6 +26,10 @@ terraform {
     cloudflare = {
       source  = "cloudflare/cloudflare"
       version = "~> 4.4.0"
+    }
+    hcloud = {
+      source  = "hetznercloud/hcloud"
+      version = ">= 1.41.0"
     }
   }
 }
