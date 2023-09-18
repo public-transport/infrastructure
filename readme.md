@@ -4,7 +4,7 @@ This repository defines our shared cloud infrastructure as well as the applicati
 
 ## Cloud infrastructure
 
-We use [Terraform](https://www.terraform.io/) to manage our cloud infrastructure (things such as servers, S3 buckets, databases, managed kubernetes, etc.). Check the [docs in `/cloud-resources`](./cloud-resources/) for details.
+We use [Terraform](https://www.terraform.io/) to manage our cloud infrastructure (things such as servers, S3 buckets, databases, networks, firewalls, etc.). Check the [docs in `/cloud-resources`](./cloud-resources/) for details.
 
 ## Applications
 

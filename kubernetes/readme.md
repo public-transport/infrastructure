@@ -6,7 +6,7 @@ We use [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes) to run our applica
 
 This repository contains a couple of so-called [_Kustomizations_](https://kustomize.io/) (basically kubernetes `yaml` files on steroids), specifying which kubernetes resources should exist on our cluster.
 
-The aforementioned [Flux v2](https://fluxcd.io/) is an application that is watching this repository and automatically creating, updating and removing kubernetes resources once new commits are added here. Flux is not deployed on an external server, but also running directly on our cluster, and even its own resources are managed through this repository, although  the initial installation of Flux needed to be done manually in the beginning (you need to start somewhere, after all 😅). The [itempotent](https://en.wikipedia.org/wiki/Idempotence) script for doing that initial kick-starting part can be found [here](./bootstrap-flux.sh) (the script also takes care of giving Flux access to read/write this repository).
+These resource definitions are picked up by [Flux v2](https://fluxcd.io/), which creates, updates and deletes corresponding objects on our cluster as needed. The Flux application itself is not deployed on an external server, but also running directly within our cluster, with its own resources also being managed through this repository.
 
 Flux performs one more crucial task to make this whole setup work: Let's suppose you're working on an app that is deployed here, and you create new releases of your app from time to time. Ideally, you don't want to manually update your app's version tag everytime you build and push a new container image. This is why flux can be told to watch specific images in a docker registry, or specific charts in a helm registry, for updates, and automatically update and commit the latest tag to this repository, even following sophisticated versioning schemes, if you want.
 
@@ -30,11 +30,11 @@ In your app's repository, you should set up a CI task to automatically build and
 4. Open the file `kubernetes/apps/kustomization.yaml`, which contains a list of all deployed apps. Add your app's identifier there (e.g. `some-app`) below the `example-app`.
 5. If your app needs to use some secret environment variables, … *docs still TBD (for now, contact [@juliuste](https://github.com/juliuste) to help you in this case, we already have a system set up allowing you to upload secrets to git in an encrypted manner, docs will be added here later)*
 6. Create a PR with your changes. Your app should be deployed once that PR is merged.
-7. Create a `CNAME` record for your domain to `cluster.infra.public-transport.earth`. If you can't use a `CNAME` record, create an `A` record to `51.91.26.140` instead (IPv6 is tbd).
+7. Create a `CNAME` record for your domain to `tilia.cluster.infra.public-transport.earth`. If you can't use a `CNAME` record, create an `A` record to `128.140.25.180` and an `AAAA` record to `2a01:4f8:c011:5b7::1` instead.
 
 ### Updating existing apps
 
-As mentioned before, your app will be updated automatically as long as you publish docker images tagged in the aforementioned format. However, there might be times where you want to change some configuration here first instead of updating automatically. For these situations, the docker tags include versioning information, by default `v1_…`. If you want to introduce a breaking change to your app, you can do so as follows:
+As mentioned before, your app will be updated automatically as long as you publish docker images tagged in the format described above. However, there might be times when you want to change some configuration here first instead of updating your app automatically. For these situations, our docker tags include versioning information, by default `v1_…`. If you want to introduce a breaking change to your app, you can do so as follows:
 
 - Update your app's repository to tag docker images with `v2_…` instead of `v1_…`
 - Make any required changes to the infrastructure defined in this repo
@@ -44,7 +44,7 @@ As mentioned before, your app will be updated automatically as long as you publi
 
 Some of the most common reasons for using Kubernetes are the fault-tolerance and scalability you can achieve for your deployments. One disclaimer in that regard: By default, apps you add here don't scale automatically. The reason for this is that our infrastructure (meaning the number of worker machines) also doesn't scale up automatically for now, so having apps "autoscale" by default might cause misunderstandings and a false sense of security. However, enabling autostaling can still make sense, even on a finite pool of machines, and is very easy with our setup, only requiring a bit of additional configuration in your app's `release.yaml` (tbd).
 
-## What's the structure of all these configuration files and directories?
+## What's the purpose of all these configuration files and directories?
 
 You only need to read this if you're interested in doing anything beyond deploying simple apps.
 
@@ -54,7 +54,7 @@ The basic structure of the `kubernetes` directory is as follows:
 - `apps` contains all app-specific resources (except secrets)
 - `secrets` contains secrets encrypted with the public key in `secrets/.sops.pub.asc`
 - `infrastructure` contains underlying components required by most/all apps, such as tls certificate issuing or log collection
-- `cluster` is the "entrypoint" for our cluster, all required resources are imported/referenced here from the other directories listed above. Think of everything in `cluster` as the cluster's `package.json`, just split up into different files :smile:
+- `clusters/tilia` is the "entrypoint" for our cluster, all required resources are imported/referenced here from the other directories listed above. Think of everything in `clusters/tilia` as the cluster's `package.json`, just split up into different files :smile: We could - in theory - also define other clusters besides `tilia` in the `clusters` directory, however we currently only need this for short-term maintenance/migration purposes.
 
 ## Still TBD
 
