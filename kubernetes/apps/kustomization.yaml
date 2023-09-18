@@ -8,9 +8,9 @@ resources:
   # - fpti-js-badges
   # - fptf-badges
   # - db-rest
-  # - api-direkt-bahn-guru
-  # - bahn-guru
-  # - link-bahn-guru
+  - api-direkt-bahn-guru
+  - bahn-guru
+  - link-bahn-guru
   - example-app
   # - v5-vbb-transport-rest
   # - umami

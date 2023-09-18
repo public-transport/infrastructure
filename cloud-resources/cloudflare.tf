@@ -3,6 +3,7 @@ variable "cloudflare_account_id" {}
 
 locals {
   cluster_domain = "cluster.infra.public-transport.earth"
+  tilia_cluster_domain = "tilia.cluster.infra.public-transport.earth"
 }
 
 provider "cloudflare" {
@@ -67,7 +68,7 @@ resource "cloudflare_record" "bahn_guru_root" {
   zone_id = cloudflare_zone.bahn_guru.id
   type    = "CNAME"
   name    = "@"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 
@@ -83,7 +84,7 @@ resource "cloudflare_record" "bahn_guru_direkt_subdomains" {
   zone_id = cloudflare_zone.bahn_guru.id
   type    = "CNAME"
   name    = "*.direkt"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 
@@ -99,6 +100,14 @@ resource "cloudflare_record" "bahn_guru_beta_subdomains" {
   zone_id = cloudflare_zone.bahn_guru.id
   type    = "CNAME"
   name    = "*.beta"
+  value   = local.tilia_cluster_domain
+  proxied = true
+}
+
+resource "cloudflare_record" "bahn_guru_developer" {
+  zone_id = cloudflare_zone.bahn_guru.id
+  type    = "CNAME"
+  name    = "developer"
   value   = local.cluster_domain
   proxied = true
 }
@@ -107,7 +116,7 @@ resource "cloudflare_record" "bahn_guru_subdomains" {
   zone_id = cloudflare_zone.bahn_guru.id
   type    = "CNAME"
   name    = "*"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 
@@ -117,7 +126,7 @@ resource "cloudflare_record" "railway_guru_root" {
   zone_id = cloudflare_zone.railway_guru.id
   type    = "CNAME"
   name    = "@"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 
@@ -125,7 +134,7 @@ resource "cloudflare_record" "railway_guru_subdomains" {
   zone_id = cloudflare_zone.railway_guru.id
   type    = "CNAME"
   name    = "*"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 

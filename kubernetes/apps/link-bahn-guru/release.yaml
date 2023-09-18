@@ -11,12 +11,12 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/link.bahn.guru" # {"$imagepolicy": "flux-system:link-bahn-guru-image-policy:name"}
-      tag: "v1_b586f8a_2023-01-23T13.06.14Z" # {"$imagepolicy": "flux-system:link-bahn-guru-image-policy:tag"}
+      tag: "v1_31a4685_2023-09-18T02.50.47Z" # {"$imagepolicy": "flux-system:link-bahn-guru-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000

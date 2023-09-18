@@ -11,12 +11,12 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/api.direkt.bahn.guru" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:name"}
-      tag: "v1_a45675a_2022-05-25T23.50.04Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
+      tag: "v1_6f75e85_2023-09-18T02.48.43Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
