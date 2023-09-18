@@ -35,6 +35,10 @@ terraform {
       source  = "fluxcd/flux"
       version = "~> 1.1.0"
     }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.23.0"
+    }
     github = {
       source  = "integrations/github"
       version = "~> 5.37.0"
