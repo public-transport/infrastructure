@@ -11,12 +11,12 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     image:
       repositoryWithRegistry: "ghcr.io/public-transport/fptf-badges" # {"$imagepolicy": "flux-system:fptf-badges-image-policy:name"}
-      tag: "v1_870ca07_2021-10-24T08.22.36Z" # {"$imagepolicy": "flux-system:fptf-badges-image-policy:tag"}
+      tag: "v1_d0e77d4_2023-09-18T03.25.18Z" # {"$imagepolicy": "flux-system:fptf-badges-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000

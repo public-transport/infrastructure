@@ -11,13 +11,13 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     hasSecrets: true
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/chore-score-bot" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:name"}
-      tag: "v1_514ed3f_2023-07-21T19.47.48Z" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:tag"}
+      tag: "v1_7d4233d_2023-09-18T02.57.14Z" # {"$imagepolicy": "flux-system:chore-score-bot-image-policy:tag"}
     exposedPort: 3000
     environment:
       MONGODB_DATABASE: chore-score-bot

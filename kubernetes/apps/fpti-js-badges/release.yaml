@@ -11,12 +11,12 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     image:
       repositoryWithRegistry: "ghcr.io/public-transport/fpti-js-badges" # {"$imagepolicy": "flux-system:fpti-js-badges-image-policy:name"}
-      tag: "v1_7c01bb8_2021-10-24T08.24.10Z" # {"$imagepolicy": "flux-system:fpti-js-badges-image-policy:tag"}
+      tag: "v1_02d6a7f_2023-09-18T03.23.49Z" # {"$imagepolicy": "flux-system:fpti-js-badges-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000

@@ -4,9 +4,9 @@ resources:
   - european-transport-feeds-website
   - european-transport-feeds-data
   - public-transport-data-scraper-legacy-proxy
-  # - vbb-departure-hotline
-  # - fpti-js-badges
-  # - fptf-badges
+  - vbb-departure-hotline
+  - fpti-js-badges
+  - fptf-badges
   # - db-rest
   - api-direkt-bahn-guru
   - bahn-guru
@@ -14,5 +14,5 @@ resources:
   - example-app
   # - v5-vbb-transport-rest
   # - umami
-  # - chore-score-bot
+  - chore-score-bot
   # - travel-price-map-redirects
