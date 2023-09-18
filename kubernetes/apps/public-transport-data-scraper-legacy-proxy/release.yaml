@@ -11,23 +11,23 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/public-transport-data-scraper-legacy-proxy" # {"$imagepolicy": "flux-system:public-transport-data-scraper-legacy-proxy-image-policy:name"}
-      tag: "v1_592afa6_2023-08-29T19.04.22Z" # {"$imagepolicy": "flux-system:public-transport-data-scraper-legacy-proxy-image-policy:tag"}
+      tag: "v1_a9ef100_2023-09-18T02.44.42Z" # {"$imagepolicy": "flux-system:public-transport-data-scraper-legacy-proxy-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
     hosts:
       - 'de.data.public-transport.earth'
-      # resources:
-      #   limits:
-      #     cpu: 200m
-      #     memory: 256Mi
-      #   requests:
-      #     cpu: 100m
-      #     memory: 128Mi
+    # resources:
+    #   limits:
+    #     cpu: 200m
+    #     memory: 256Mi
+    #   requests:
+    #     cpu: 100m
+    #     memory: 128Mi
     livenessProbe: false
     startupProbe: false

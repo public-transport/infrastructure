@@ -42,21 +42,21 @@ resource "digitalocean_record" "european_transport_feeds_website_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
   name   = "eu.data"
-  value  = "${digitalocean_record.cluster_record.fqdn}."
+  value  = "${digitalocean_record.tilia_cluster_record_v4.fqdn}."
 }
 
 resource "digitalocean_record" "european_transport_feeds_data_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
   name   = "data"
-  value  = "${digitalocean_record.cluster_record.fqdn}."
+  value  = "${digitalocean_record.tilia_cluster_record_v4.fqdn}."
 }
 
 resource "digitalocean_record" "public_transport_data_scraper_legacy_proxy_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
   name   = "de.data"
-  value  = "${digitalocean_record.cluster_record.fqdn}."
+  value  = "${digitalocean_record.tilia_cluster_record_v4.fqdn}."
 }
 
 resource "digitalocean_record" "umami_record" {
