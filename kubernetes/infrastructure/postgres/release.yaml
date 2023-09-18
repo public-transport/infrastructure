@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
-      version: '^11.6.3'
+      version: '^12.11.2'
   values:
     global:
       postgresql:
