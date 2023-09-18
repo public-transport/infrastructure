@@ -15,4 +15,4 @@ resources:
   # - v5-vbb-transport-rest
   - umami
   - chore-score-bot
-  # - travel-price-map-redirects
+  - travel-price-map-redirects

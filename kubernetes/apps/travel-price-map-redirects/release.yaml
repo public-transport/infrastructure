@@ -1,0 +1,37 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: travel-price-map-redirects
+  namespace: app-releases
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '^3.0.0'
+  interval: 5m
+  values:
+    image:
+      repositoryWithRegistry: "ghcr.io/juliuste/docker-nginx-redirect" # {"$imagepolicy": "flux-system:docker-nginx-redirect-image-policy:name"}
+      tag: "v1_147478a_2023-09-18T16.16.48Z" # {"$imagepolicy": "flux-system:docker-nginx-redirect-image-policy:tag"}
+    exposedPort: 80
+    environment:
+      PORT: 80
+      SERVER_REDIRECT: 'github.com'
+      SERVER_REDIRECT_PATH: '/juliuste/travel-price-map'
+    hosts:
+      - 'pricemap.eu'
+      - 'www.pricemap.eu'
+      - 'api.pricemap.eu'
+    # resources:
+    #   limits:
+    #     cpu: 200m
+    #     memory: 256Mi
+    #   requests:
+    #     cpu: 100m
+    #     memory: 128Mi
+    livenessProbe: false
+    startupProbe: false

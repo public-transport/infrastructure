@@ -2,7 +2,6 @@ variable "cloudflare_api_token" {}
 variable "cloudflare_account_id" {}
 
 locals {
-  cluster_domain = "cluster.infra.public-transport.earth"
   tilia_cluster_domain = "tilia.cluster.infra.public-transport.earth"
 }
 
@@ -162,7 +161,7 @@ resource "cloudflare_record" "pricemap_eu_root" {
   zone_id = cloudflare_zone.pricemap_eu.id
   type    = "CNAME"
   name    = "@"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 
@@ -170,6 +169,6 @@ resource "cloudflare_record" "pricemap_eu_subdomains" {
   zone_id = cloudflare_zone.pricemap_eu.id
   type    = "CNAME"
   name    = "*"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
