@@ -1,19 +1,19 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - european-transport-feeds-website
-  - european-transport-feeds-data
-  - public-transport-data-scraper-legacy-proxy
-  - vbb-departure-hotline
-  - fpti-js-badges
-  - fptf-badges
-  - db-rest
-  - api-direkt-bahn-guru
-  - bahn-guru
-  - bus-bahn-guru
-  - link-bahn-guru
+  # - european-transport-feeds-website
+  # - european-transport-feeds-data
+  # - public-transport-data-scraper-legacy-proxy
+  # - vbb-departure-hotline
+  # - fpti-js-badges
+  # - fptf-badges
+  # - db-rest
+  # - api-direkt-bahn-guru
+  # - bahn-guru
+  # - bus-bahn-guru
+  # - link-bahn-guru
   - example-app
-  - v5-vbb-transport-rest
-  - umami
-  - chore-score-bot
-  - travel-price-map-redirects
+  # - v5-vbb-transport-rest
+  # - umami
+  # - chore-score-bot
+  # - travel-price-map-redirects

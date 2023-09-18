@@ -3,6 +3,5 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - charts.yaml
-  - ingress-nginx.yaml
   - stakater.yaml
   - bitnami.yaml

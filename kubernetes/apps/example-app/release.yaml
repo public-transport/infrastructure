@@ -11,14 +11,14 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     image:
       # [MODIFY] change this to your docker image name (including registry), and replace "example-app" in the comment afterwards with the app identifier you picked above
       repositoryWithRegistry: "ghcr.io/public-transport/example-deployment" # {"$imagepolicy": "flux-system:example-app-image-policy:name"}
       # [MODIFY] change this to your docker tag, and replace "example-app" in the comment afterwards with the app identifier you picked above
-      tag: "v1_99b8215_2021-10-24T07.32.12Z" # {"$imagepolicy": "flux-system:example-app-image-policy:tag"}
+      tag: "v1_0b2bd0d_2023-09-18T02.06.31Z" # {"$imagepolicy": "flux-system:example-app-image-policy:tag"}
     exposedPort: 3000 # [MODIFY] change this to the port exposed by your docker container
     environment: # [MODIFY] define all non-confidential environment variables for your container here
       PORT: 3000

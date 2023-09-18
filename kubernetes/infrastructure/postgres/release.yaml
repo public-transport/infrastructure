@@ -14,7 +14,6 @@ spec:
       version: '^11.6.3'
   values:
     global:
-      storageClass: 'csi-cinder-high-speed'
       postgresql:
         auth:
           username: 'user'

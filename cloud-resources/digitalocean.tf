@@ -35,7 +35,7 @@ resource "digitalocean_record" "example_app_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
   name   = "example.infra"
-  value  = "${digitalocean_record.cluster_record.fqdn}."
+  value  = "${digitalocean_record.tilia_cluster_record_v4.fqdn}."
 }
 
 resource "digitalocean_record" "european_transport_feeds_website_record" {
