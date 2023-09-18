@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
-      version: '^18.0.0'
+      version: '^18.0.4'
   values:
     # clusterDomain: 'cluster.infra.public-transport.earth'
     architecture: 'standalone'
