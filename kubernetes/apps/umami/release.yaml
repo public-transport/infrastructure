@@ -11,14 +11,14 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     hasSecrets: true
     image:
       updateTagAutomatically: false
       repositoryWithRegistry: "ghcr.io/umami-software/umami"
-      tag: "postgresql-v2.2.0"
+      tag: "postgresql-v2.6.2"
     exposedPort: 3000
     environment: {}
     hosts:

@@ -63,5 +63,5 @@ resource "digitalocean_record" "umami_record" {
   domain = "public-transport.earth"
   type   = "CNAME"
   name   = "developer"
-  value  = "${digitalocean_record.cluster_record.fqdn}."
+  value  = "${digitalocean_record.tilia_cluster_record_v4.fqdn}."
 }

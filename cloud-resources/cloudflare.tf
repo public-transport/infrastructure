@@ -108,7 +108,7 @@ resource "cloudflare_record" "bahn_guru_developer" {
   zone_id = cloudflare_zone.bahn_guru.id
   type    = "CNAME"
   name    = "developer"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 
@@ -144,7 +144,7 @@ resource "cloudflare_record" "umsteigen_jetzt_root" {
   zone_id = cloudflare_zone.umsteigen_jetzt.id
   type    = "CNAME"
   name    = "@"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 
@@ -152,7 +152,7 @@ resource "cloudflare_record" "umsteigen_jetzt_subdomains" {
   zone_id = cloudflare_zone.umsteigen_jetzt.id
   type    = "CNAME"
   name    = "*"
-  value   = local.cluster_domain
+  value   = local.tilia_cluster_domain
   proxied = true
 }
 
