@@ -10,7 +10,6 @@ resources:
   # - db-rest
   # - api-direkt-bahn-guru
   # - bahn-guru
-  # - bus-bahn-guru
   # - link-bahn-guru
   - example-app
   # - v5-vbb-transport-rest
