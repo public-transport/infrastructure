@@ -23,7 +23,7 @@ resource "ovh_cloud_project_kube" "orchid_cluster" {
   version      = "1.27"
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
@@ -38,4 +38,8 @@ resource "ovh_cloud_project_kube_nodepool" "orchid_workerslarge" {
   monthly_billed = true # THIS IS A BIT DANGEROUS, BECAUSE PODS ARE BILLED IMMEDIATELY FOR A FULL MONTH, SO PLEASE DEACTIVATE THIS WHEN EXPERIMENTING
   anti_affinity  = true
   autoscale      = false
+
+  lifecycle {
+    prevent_destroy = false
+  }
 }
