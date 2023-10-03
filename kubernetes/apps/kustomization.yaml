@@ -7,7 +7,7 @@ resources:
   - vbb-departure-hotline
   - fpti-js-badges
   - fptf-badges
-  # - db-rest
+  - db-rest
   - api-direkt-bahn-guru
   - bahn-guru
   - link-bahn-guru

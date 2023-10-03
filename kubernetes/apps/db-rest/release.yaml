@@ -11,18 +11,18 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^2.0.0'
+      version: '^3.0.0'
   interval: 5m
   values:
     image:
       updateTagAutomatically: false
-      repositoryWithRegistry: "docker.io/derhuerst/db-rest"
-      tag: "5"
+      repositoryWithRegistry: "ghcr.io/derhuerst/db-rest"
+      tag: "v5_72caa58_2023-09-19T08.59.46Z"
     exposedPort: 3000
     environment:
       PORT: 3000
     hosts:
-      - 'v5.db.juliustens.eu'
+      - 'v5.db.api.bahn.guru'
 
 # resources:
 #   limits:
