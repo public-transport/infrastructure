@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/api.direkt.bahn.guru" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:name"}
-      tag: "v1_6f75e85_2023-09-18T02.48.43Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
+      tag: "v1_9cbf5f2_2023-10-03T04.20.17Z" # {"$imagepolicy": "flux-system:api-direkt-bahn-guru-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
