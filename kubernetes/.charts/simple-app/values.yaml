@@ -14,6 +14,7 @@ hosts:
   - some.example.domain
 
 replicas: 2
+minAvailable: 1
 resources:
   limits:
     cpu: 200m

@@ -1,0 +1,14 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "app.fullName" . }}-pdb
+  namespace: {{ include "app.fullName" . }}
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}-pdb
+    helm.sh/chart: {{ include "chart.fullName" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  selector:
+    app: {{ include "app.fullName" . }}
+  minAvailable: {{ .Values.minAvailable }}
