@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^3.0.0'
+      version: '^3.0.1'
   interval: 5m
   values:
     image:
@@ -30,5 +30,7 @@ spec:
       requests:
         cpu: 500m
         memory: 256Mi
+    replicas: 4
+    minAvailable: 2
     livenessProbe: '/health'
     startupProbe: '/health'
