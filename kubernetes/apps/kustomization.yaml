@@ -12,7 +12,9 @@ resources:
   - bahn-guru
   - link-bahn-guru
   - example-app
-  # - v5-vbb-transport-rest
+  - v6-bvg-transport-rest
+  - v6-db-transport-rest
+  - v6-vbb-transport-rest
   - umami
   - chore-score-bot
   - travel-price-map-redirects
