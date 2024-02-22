@@ -5,39 +5,39 @@ terraform {
       name = "infrastructure"
     }
   }
-  required_version = ">= 1.4.0"
+  required_version = "~> 1.7"
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
-      version = "~> 2.25"
+      version = "~> 2.34"
     }
     mongodbatlas = {
       source  = "mongodb/mongodbatlas"
-      version = "~> 1.6"
+      version = "~> 1.15"
     }
     betteruptime = {
       source  = "BetterStackHQ/better-uptime"
-      version = "~> 0.3.14"
+      version = "~> 0.6"
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 4.4.0"
+      version = "~> 4.25"
     }
     hcloud = {
       source  = "hetznercloud/hcloud"
-      version = "~> 1.42.0"
+      version = "~> 1.45"
     }
     flux = {
       source  = "fluxcd/flux"
-      version = "~> 1.1.0"
+      version = "~> 1.2"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.23.0"
+      version = "~> 2.6"
     }
     github = {
       source  = "integrations/github"
-      version = "~> 5.37.0"
+      version = "~> 6.0"
     }
   }
 }
