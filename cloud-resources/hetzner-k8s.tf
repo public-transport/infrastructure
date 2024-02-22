@@ -15,13 +15,15 @@ module "kube-hetzner" {
   providers            = { hcloud = hcloud }
   hcloud_token         = var.hetzner_cloud_token
   source               = "kube-hetzner/kube-hetzner/hcloud"
-  version              = "v2.7.1"
+  version              = "v2.12.0"
   create_kustomization = false
 
   ssh_public_key  = var.hetzner_k8s_ssh_public
   ssh_private_key = var.hetzner_k8s_ssh_private
 
   network_region = "eu-central"
+
+  initial_k3s_channel = "v1.28"
 
   allow_scheduling_on_control_plane = true
   control_plane_nodepools = [{
