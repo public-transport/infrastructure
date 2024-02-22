@@ -30,7 +30,7 @@ In your app's repository, you should set up a CI task to automatically build and
 4. Open the file `kubernetes/apps/kustomization.yaml`, which contains a list of all deployed apps. Add your app's identifier there (e.g. `some-app`) below the `example-app`.
 5. If your app needs to use some secret environment variables, … *docs still TBD (for now, contact [@juliuste](https://github.com/juliuste) to help you in this case, we already have a system set up allowing you to upload secrets to git in an encrypted manner, docs will be added here later)*
 6. Create a PR with your changes. Your app should be deployed once that PR is merged.
-7. Create a `CNAME` record for your domain to `tilia.cluster.infra.public-transport.earth`. If you can't use a `CNAME` record, create an `A` record to `128.140.25.180` and an `AAAA` record to `2a01:4f8:c011:5b7::1` instead.
+7. Create a `CNAME` record for your domain to `tilia.cluster.infra.public-transport.earth`. If you can't use a `CNAME` record, create an `A` record to `142.132.243.125` and an `AAAA` record to `2a01:4f8:c01e:71c::1` instead.
 
 ### Updating existing apps
 
