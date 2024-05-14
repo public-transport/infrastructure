@@ -21,6 +21,7 @@ resource "betteruptime_monitor_group" "bahn_guru" {
 }
 
 resource "betteruptime_monitor" "bahn_guru_start" {
+  checks_version   = "v1"
   monitor_type     = "status"
   url              = "https://bahn.guru"
   monitor_group_id = betteruptime_monitor_group.bahn_guru.id
@@ -37,6 +38,7 @@ resource "betteruptime_status_page_resource" "bahn_guru_start" {
 
 
 resource "betteruptime_monitor" "bahn_guru_calendar" {
+  checks_version   = "v1"
   monitor_type     = "status"
   url              = "https://bahn.guru/calendar?origin=Berlin+Hauptbahnhof&destination=Frankfurt+%28Main%29+Hbf&submit=Suchen&class=2&bc=0&departureAfter=&arrivalBefore=&duration=&maxChanges=&betterUptime=true"
   monitor_group_id = betteruptime_monitor_group.bahn_guru.id
@@ -53,6 +55,7 @@ resource "betteruptime_status_page_resource" "bahn_guru_calendar" {
 
 
 resource "betteruptime_monitor" "bahn_guru_impressum" {
+  checks_version   = "v1"
   monitor_type     = "status"
   url              = "https://bahn.guru/impressum"
   monitor_group_id = betteruptime_monitor_group.bahn_guru.id
@@ -73,6 +76,7 @@ resource "betteruptime_monitor_group" "api_direkt_bahn_guru" {
 }
 
 resource "betteruptime_monitor" "api_direkt_bahn_guru" {
+  checks_version   = "v1"
   monitor_type     = "status"
   url              = "https://api.direkt.bahn.guru/8011160"
   monitor_group_id = betteruptime_monitor_group.api_direkt_bahn_guru.id
