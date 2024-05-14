@@ -24,5 +24,11 @@ spec:
             userPasswordKey: 'user-password'
             replicationPasswordKey: 'replication-password'
     primary:
-      resourcesPreset: 'medium'
+      resources:
+        limits:
+          memory: '1536Mi'
+          cpu: '750m'
+        requests:
+          memory: '1024Mi'
+          cpu: '500m'
   interval: 5m
