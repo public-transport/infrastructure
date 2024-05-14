@@ -20,7 +20,8 @@ spec:
       repositoryWithRegistry: "ghcr.io/umami-software/umami"
       tag: "postgresql-v2.11.3"
     exposedPort: 3000
-    environment: {}
+    environment:
+      PRISMA_SCHEMA_DISABLE_ADVISORY_LOCK: 'true'
     hosts:
       - 'developer.public-transport.earth'
       - 'developer.bahn.guru'
