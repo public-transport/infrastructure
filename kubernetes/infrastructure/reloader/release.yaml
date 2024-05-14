@@ -12,5 +12,5 @@ spec:
         kind: HelmRepository
         name: stakater
         namespace: flux-system
-      version: 'v1.0.15'
+      version: 'v1.0.95'
   interval: 5m
