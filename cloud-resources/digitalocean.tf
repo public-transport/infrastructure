@@ -6,14 +6,12 @@ provider "digitalocean" {
 
 # basic infrastructure
 
-resource "digitalocean_record" "cluster_record" {
+resource "digitalocean_record" "cluster_record_legacy" {
   domain = "public-transport.earth"
   type   = "A"
   name   = "cluster.infra"
-  value  = "51.91.81.181" # todo: create load balancer with terraform and reference its ip address here instead of hardcoding (currently not supported by ovh)
+  value  = module.kube-hetzner.ingress_public_ipv4
 }
-
-# todo: ipv6 once ovh or scaleway load balancers support it
 
 resource "digitalocean_record" "tilia_cluster_record_v4" {
   domain = "public-transport.earth"
