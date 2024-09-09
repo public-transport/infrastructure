@@ -1,0 +1,31 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: lod-codefor-de-api
+  namespace: app-releases
+spec:
+  chart:
+    spec:
+      chart: simple-app
+      sourceRef:
+        kind: HelmRepository
+        name: charts
+        namespace: flux-system
+      version: '^3.1.0'
+  interval: 5m
+  values:
+    image:
+      repositoryWithRegistry: "ghcr.io/juliuste/lod.codefor.de-api" # {"$imagepolicy": "flux-system:lod-codefor-de-api-image-policy:name"}
+      tag: "v1_e7af552_2024-09-09T19.30.47Z" # {"$imagepolicy": "flux-system:lod-codefor-de-api-image-policy:tag"}
+    exposedPort: 8080
+    environment:
+      PORT: 8080
+    resources:
+      limits:
+        cpu: 1000m
+        memory: 2048Mi
+      requests:
+        cpu: 100m
+        memory: 512Mi
+    livenessProbe: false
+    startupProbe: false

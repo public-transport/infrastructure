@@ -16,3 +16,5 @@ resources:
   - umami
   - chore-score-bot
   - travel-price-map-redirects
+  - lod-codefor-de-api
+  - lod-codefor-de-frontend
