@@ -23,7 +23,7 @@ module "kube-hetzner" {
 
   network_region = "eu-central"
 
-  initial_k3s_channel = "v1.28"
+  initial_k3s_channel = "stable"
 
   allow_scheduling_on_control_plane = true
   control_plane_nodepools = [{
