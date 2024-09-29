@@ -9,35 +9,35 @@ terraform {
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
-      version = "~> 2.34"
+      version = "~> 2.42"
     }
     mongodbatlas = {
       source  = "mongodb/mongodbatlas"
-      version = "~> 1.15"
+      version = "~> 1.20"
     }
     betteruptime = {
       source  = "BetterStackHQ/better-uptime"
-      version = "~> 0.6"
+      version = "~> 0.11"
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 4.25"
+      version = "~> 4.42"
     }
     hcloud = {
       source  = "hetznercloud/hcloud"
-      version = "~> 1.45"
+      version = "~> 1.48"
     }
     flux = {
       source  = "fluxcd/flux"
-      version = "~> 1.2"
+      version = "~> 1.3"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.6"
+      version = "~> 2.32"
     }
     github = {
       source  = "integrations/github"
-      version = "~> 6.0"
+      version = "~> 6.3"
     }
   }
 }
