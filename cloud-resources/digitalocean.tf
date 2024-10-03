@@ -6,11 +6,18 @@ provider "digitalocean" {
 
 # basic infrastructure
 
-resource "digitalocean_record" "cluster_record_legacy" {
+resource "digitalocean_record" "cluster_record_legacy_v4" {
   domain = "public-transport.earth"
   type   = "A"
   name   = "cluster.infra"
   value  = module.kube-hetzner.ingress_public_ipv4
+}
+
+resource "digitalocean_record" "cluster_record_legacy_v6" {
+  domain = "public-transport.earth"
+  type   = "AAAA"
+  name   = "cluster.infra"
+  value  = module.kube-hetzner.ingress_public_ipv6
 }
 
 resource "digitalocean_record" "tilia_cluster_record_v4" {
