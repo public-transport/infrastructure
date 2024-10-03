@@ -26,6 +26,8 @@ module "kube-hetzner" {
   initial_k3s_channel = "stable"
 
   allow_scheduling_on_control_plane = true
+  system_upgrade_enable_eviction    = false # 'false' recommended for small clusters
+
   control_plane_nodepools = [{
     name        = "control-and-agent",
     server_type = "cax21",
