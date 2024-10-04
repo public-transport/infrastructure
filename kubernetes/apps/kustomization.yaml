@@ -13,7 +13,7 @@ resources:
   - link-bahn-guru
   - example-app
   # - v5-vbb-transport-rest
-  # - umami
+  - umami
   - chore-score-bot
   - travel-price-map-redirects
   - lod-codefor-de-api
