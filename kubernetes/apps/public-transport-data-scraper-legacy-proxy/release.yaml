@@ -22,12 +22,5 @@ spec:
       PORT: 3000
     hosts:
       - 'de.data.public-transport.earth'
-    # resources:
-    #   limits:
-    #     cpu: 200m
-    #     memory: 256Mi
-    #   requests:
-    #     cpu: 100m
-    #     memory: 128Mi
     livenessProbe: false
     startupProbe: false

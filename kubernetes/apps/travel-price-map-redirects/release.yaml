@@ -26,12 +26,5 @@ spec:
       - 'pricemap.eu'
       - 'www.pricemap.eu'
       - 'api.pricemap.eu'
-    # resources:
-    #   limits:
-    #     cpu: 200m
-    #     memory: 256Mi
-    #   requests:
-    #     cpu: 100m
-    #     memory: 128Mi
     livenessProbe: false
     startupProbe: false

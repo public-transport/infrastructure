@@ -23,12 +23,5 @@ spec:
       SPARQL_ENDPOINT_URL: 'http://lod-codefor-de-api-service.lod-codefor-de-api:80/dataset/sparql'
     hosts:
       - 'lod.codefor.de'
-    # resources:
-    #   limits:
-    #     cpu: 200m
-    #     memory: 256Mi
-    #   requests:
-    #     cpu: 100m
-    #     memory: 128Mi
     livenessProbe: false
     startupProbe: false

@@ -23,16 +23,6 @@ spec:
       PORT: 3000
     hosts:
       - 'v5.db.api.bahn.guru'
-
-# resources:
-#   limits:
-#     cpu: 200m
-#     memory: 256Mi
-#   requests:
-#     cpu: 100m
-#     memory: 128Mi
-
     replicas: 3
-
     livenessProbe: false
     startupProbe: false

@@ -24,12 +24,5 @@ spec:
     hosts:
     - 'chore-score-bot.juliustens.eu' # todo: remove this
     replicas: 1
-    # resources:
-    #   limits:
-    #     cpu: 200m
-    #     memory: 256Mi
-    #   requests:
-    #     cpu: 100m
-    #     memory: 128Mi
     livenessProbe: false
     startupProbe: false

@@ -29,10 +29,9 @@ spec:
     - 'www.railway.guru'
     resources:
       limits:
-        cpu: 500m
         memory: 1024Mi
       requests:
-        cpu: 250m
+        cpu: 200m
         memory: 512Mi
     replicas: 4
     minAvailable: 2
