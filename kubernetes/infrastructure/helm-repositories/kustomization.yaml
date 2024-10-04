@@ -5,3 +5,4 @@ resources:
   - charts.yaml
   - stakater.yaml
   - bitnami.yaml
+  - prometheus-community.yaml

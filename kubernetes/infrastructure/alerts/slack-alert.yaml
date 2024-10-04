@@ -40,4 +40,7 @@ spec:
       namespace: 'postgres'
     - kind: HelmRelease
       name: '*'
+      namespace: 'monitoring'
+    - kind: HelmRelease
+      name: '*'
       namespace: 'reloader'
