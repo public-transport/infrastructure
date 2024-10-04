@@ -18,7 +18,7 @@ spec:
     image:
       updateTagAutomatically: false
       repositoryWithRegistry: "ghcr.io/umami-software/umami"
-      tag: "postgresql-v2.11.3"
+      tag: "postgresql-v2.13.2"
     exposedPort: 3000
     environment:
       PRISMA_SCHEMA_DISABLE_ADVISORY_LOCK: 'true'
