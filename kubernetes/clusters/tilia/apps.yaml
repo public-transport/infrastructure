@@ -8,8 +8,6 @@ spec:
   dependsOn:
     - name: cert-issuer
       namespace: flux-system
-    - name: postgres
-      namespace: flux-system
     - name: postgres-16
       namespace: flux-system
   sourceRef:
