@@ -25,6 +25,6 @@ spec:
         memory: 1024Mi
       requests:
         cpu: 200m
-        memory: 1024Mi
+        memory: 128Mi
     livenessProbe: false
     startupProbe: false
