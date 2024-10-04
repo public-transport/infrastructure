@@ -17,6 +17,7 @@ module "kube-hetzner" {
   source               = "kube-hetzner/kube-hetzner/hcloud"
   version              = "v2.14.5"
   create_kustomization = false
+  create_kubeconfig    = false
 
   ssh_public_key  = var.hetzner_k8s_ssh_public
   ssh_private_key = var.hetzner_k8s_ssh_private
@@ -26,7 +27,7 @@ module "kube-hetzner" {
   initial_k3s_channel = "stable"
 
   allow_scheduling_on_control_plane = true
-  system_upgrade_enable_eviction    = false # 'false' recommended for small clusters
+  system_upgrade_enable_eviction    = false
 
   control_plane_nodepools = [{
     name        = "control-and-agent",
@@ -50,18 +51,8 @@ module "kube-hetzner" {
   load_balancer_type     = "lb11"
   load_balancer_location = "fsn1"
 
-  # todo
-  # base_domain = "mycluster.example.com"
-
-  # todo
-  # ingress_controller = "nginx"
-
-  # todo
   restrict_outbound_traffic = false
 
-  # todo
   # firewall_kube_api_source = null
-
-  # todo
   # firewall_ssh_source = null
 }
