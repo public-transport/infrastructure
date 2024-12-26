@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/lod.codefor.de-api" # {"$imagepolicy": "flux-system:lod-codefor-de-api-image-policy:name"}
-      tag: "v1_9c17abb_2024-12-25T02.28.15Z" # {"$imagepolicy": "flux-system:lod-codefor-de-api-image-policy:tag"}
+      tag: "v1_9c17abb_2024-12-26T02.28.44Z" # {"$imagepolicy": "flux-system:lod-codefor-de-api-image-policy:tag"}
     exposedPort: 8080
     environment:
       PORT: 8080
