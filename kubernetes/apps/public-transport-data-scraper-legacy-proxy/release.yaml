@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repositoryWithRegistry: "ghcr.io/juliuste/public-transport-data-scraper-legacy-proxy" # {"$imagepolicy": "flux-system:public-transport-data-scraper-legacy-proxy-image-policy:name"}
-      tag: "v1_2aee946_2024-12-27T12.42.59Z" # {"$imagepolicy": "flux-system:public-transport-data-scraper-legacy-proxy-image-policy:tag"}
+      tag: "v1_deaf15d_2024-12-28T16.13.47Z" # {"$imagepolicy": "flux-system:public-transport-data-scraper-legacy-proxy-image-policy:tag"}
     exposedPort: 3000
     environment:
       PORT: 3000
