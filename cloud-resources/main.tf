@@ -5,7 +5,7 @@ terraform {
       name = "infrastructure"
     }
   }
-  required_version = "~> 1.7"
+  required_version = "~> 1.12"
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
