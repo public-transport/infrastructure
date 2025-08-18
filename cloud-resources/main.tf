@@ -11,13 +11,9 @@ terraform {
       source  = "digitalocean/digitalocean"
       version = "~> 2.42"
     }
-    mongodbatlas = {
-      source  = "mongodb/mongodbatlas"
-      version = "~> 1.20"
-    }
     betteruptime = {
       source  = "BetterStackHQ/better-uptime"
-      version = "~> 0.11"
+      version = "~> 0.20"
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
@@ -25,19 +21,19 @@ terraform {
     }
     hcloud = {
       source  = "hetznercloud/hcloud"
-      version = "~> 1.48"
+      version = "~> 1.52"
     }
     flux = {
       source  = "fluxcd/flux"
-      version = "~> 1.4"
+      version = "~> 1.6"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.32"
+      version = "~> 2.38"
     }
     github = {
       source  = "integrations/github"
-      version = "~> 6.3"
+      version = "~> 6.6"
     }
   }
 }
