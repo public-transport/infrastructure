@@ -7,10 +7,6 @@ terraform {
   }
   required_version = "~> 1.12"
   required_providers {
-    digitalocean = {
-      source  = "digitalocean/digitalocean"
-      version = "~> 2.42"
-    }
     betteruptime = {
       source  = "BetterStackHQ/better-uptime"
       version = "~> 0.20"
