@@ -23,19 +23,19 @@ provider "kubernetes" {
   cluster_ca_certificate = module.kube-hetzner.kubeconfig_data.cluster_ca_certificate
 }
 
-resource "flux_bootstrap_git" "flux_tilia" {
-  depends_on       = [github_repository_deploy_key.github_deploy_key_flux]
-  path             = "kubernetes/clusters/tilia"
-  components_extra = ["image-reflector-controller", "image-automation-controller"]
-}
+# resource "flux_bootstrap_git" "flux_tilia" {
+#   depends_on       = [github_repository_deploy_key.github_deploy_key_flux]
+#   path             = "kubernetes/clusters/tilia"
+#   components_extra = ["image-reflector-controller", "image-automation-controller"]
+# }
 
-resource "kubernetes_secret" "flux_encryption_key" {
-  depends_on = [flux_bootstrap_git.flux_tilia]
-  metadata {
-    name      = "sops-gpg"
-    namespace = "flux-system"
-  }
-  data = {
-    "sops.asc" = var.flux_encryption_private_key
-  }
-}
+# resource "kubernetes_secret" "flux_encryption_key" {
+#   depends_on = [flux_bootstrap_git.flux_tilia]
+#   metadata {
+#     name      = "sops-gpg"
+#     namespace = "flux-system"
+#   }
+#   data = {
+#     "sops.asc" = var.flux_encryption_private_key
+#   }
+# }
