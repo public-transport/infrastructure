@@ -11,6 +11,14 @@ provider "cloudflare" {
 
 # zones
 
+resource "cloudflare_zone" "public_transport_earth" {
+  account_id = var.cloudflare_account_id
+  zone       = "public-transport.earth"
+  jump_start = false
+  paused     = true
+  plan       = "free"
+}
+
 resource "cloudflare_zone" "bahn_guru" {
   account_id = var.cloudflare_account_id
   zone       = "bahn.guru"
@@ -45,6 +53,10 @@ resource "cloudflare_zone" "pricemap_eu" {
 
 # dnssec
 
+resource "cloudflare_zone_dnssec" "public_transport_earth_dnssec" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+}
+
 resource "cloudflare_zone_dnssec" "bahn_guru_dnssec" {
   zone_id = cloudflare_zone.bahn_guru.id
 }
@@ -59,6 +71,80 @@ resource "cloudflare_zone_dnssec" "umsteigen_jetzt_dnssec" {
 
 resource "cloudflare_zone_dnssec" "pricemap_eu_dnssec" {
   zone_id = cloudflare_zone.pricemap_eu.id
+}
+
+# records for public-transport.earth
+
+resource "cloudflare_record" "public_transport_earth_legacy_cluster_v4" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "A"
+  name    = "cluster.infra"
+  value   = module.kube-hetzner.ingress_public_ipv4
+  proxied = true
+}
+
+resource "cloudflare_record" "public_transport_earth_legacy_cluster_v6" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "AAAA"
+  name    = "cluster.infra"
+  value   = module.kube-hetzner.ingress_public_ipv6
+  proxied = true
+}
+
+resource "cloudflare_record" "public_transport_earth_tilia_v4" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "A"
+  name    = "tilia.cluster.infra"
+  value   = module.kube-hetzner.ingress_public_ipv4
+  proxied = true
+}
+
+resource "cloudflare_record" "public_transport_earth_tilia_v6" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "AAAA"
+  name    = "tilia.cluster.infra"
+  value   = module.kube-hetzner.ingress_public_ipv6
+  proxied = true
+}
+
+resource "cloudflare_record" "public_transport_earth_example_app" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "CNAME"
+  name    = "example.infra"
+  value   = local.tilia_cluster_domain
+  proxied = true
+}
+
+resource "cloudflare_record" "public_transport_earth_eu_data" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "CNAME"
+  name    = "eu.data"
+  value   = local.tilia_cluster_domain
+  proxied = true
+}
+
+resource "cloudflare_record" "public_transport_earth_data" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "CNAME"
+  name    = "data"
+  value   = local.tilia_cluster_domain
+  proxied = true
+}
+
+resource "cloudflare_record" "public_transport_earth_de_data" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "CNAME"
+  name    = "de.data"
+  value   = local.tilia_cluster_domain
+  proxied = true
+}
+
+resource "cloudflare_record" "public_transport_earth_umami" {
+  zone_id = cloudflare_zone.public_transport_earth.id
+  type    = "CNAME"
+  name    = "developer"
+  value   = local.tilia_cluster_domain
+  proxied = true
 }
 
 # records for bahn.guru
