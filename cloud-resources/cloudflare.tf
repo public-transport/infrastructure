@@ -75,37 +75,37 @@ resource "cloudflare_zone_dnssec" "pricemap_eu_dnssec" {
 
 # records for public-transport.earth
 
-resource "cloudflare_record" "public_transport_earth_legacy_cluster_v4" {
-  zone_id = cloudflare_zone.public_transport_earth.id
-  type    = "A"
-  name    = "cluster.infra"
-  value   = module.kube-hetzner.ingress_public_ipv4
-  proxied = true
-}
+# resource "cloudflare_record" "public_transport_earth_legacy_cluster_v4" {
+#   zone_id = cloudflare_zone.public_transport_earth.id
+#   type    = "A"
+#   name    = "cluster.infra"
+#   value   = module.kube-hetzner.ingress_public_ipv4
+#   proxied = true
+# }
 
-resource "cloudflare_record" "public_transport_earth_legacy_cluster_v6" {
-  zone_id = cloudflare_zone.public_transport_earth.id
-  type    = "AAAA"
-  name    = "cluster.infra"
-  value   = module.kube-hetzner.ingress_public_ipv6
-  proxied = true
-}
+# resource "cloudflare_record" "public_transport_earth_legacy_cluster_v6" {
+#   zone_id = cloudflare_zone.public_transport_earth.id
+#   type    = "AAAA"
+#   name    = "cluster.infra"
+#   value   = module.kube-hetzner.ingress_public_ipv6
+#   proxied = true
+# }
 
-resource "cloudflare_record" "public_transport_earth_tilia_v4" {
-  zone_id = cloudflare_zone.public_transport_earth.id
-  type    = "A"
-  name    = "tilia.cluster.infra"
-  value   = module.kube-hetzner.ingress_public_ipv4
-  proxied = true
-}
+# resource "cloudflare_record" "public_transport_earth_tilia_v4" {
+#   zone_id = cloudflare_zone.public_transport_earth.id
+#   type    = "A"
+#   name    = "tilia.cluster.infra"
+#   value   = module.kube-hetzner.ingress_public_ipv4
+#   proxied = true
+# }
 
-resource "cloudflare_record" "public_transport_earth_tilia_v6" {
-  zone_id = cloudflare_zone.public_transport_earth.id
-  type    = "AAAA"
-  name    = "tilia.cluster.infra"
-  value   = module.kube-hetzner.ingress_public_ipv6
-  proxied = true
-}
+# resource "cloudflare_record" "public_transport_earth_tilia_v6" {
+#   zone_id = cloudflare_zone.public_transport_earth.id
+#   type    = "AAAA"
+#   name    = "tilia.cluster.infra"
+#   value   = module.kube-hetzner.ingress_public_ipv6
+#   proxied = true
+# }
 
 resource "cloudflare_record" "public_transport_earth_example_app" {
   zone_id = cloudflare_zone.public_transport_earth.id
