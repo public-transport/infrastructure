@@ -30,7 +30,7 @@ module "kube-hetzner" {
   system_upgrade_enable_eviction    = false
 
   control_plane_nodepools = [{
-    name        = "control-and-agent-v2",
+    name        = "control-and-agent-v3",
     server_type = "cax21",
     location    = "fsn1",
     labels      = [],
