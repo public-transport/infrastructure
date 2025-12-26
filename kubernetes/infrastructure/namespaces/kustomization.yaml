@@ -1,7 +1,7 @@
 # certain namespaces are used in multiple "modules", so they need to be created
 # separately before everything else all other namespaces should be created
 # directly by the components that need them
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.config.k8s.io/v1
 kind: Kustomization
 resources:
   - secrets.yaml
