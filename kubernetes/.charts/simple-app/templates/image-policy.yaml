@@ -1,5 +1,5 @@
 {{- if .Values.image.updateTagAutomatically }}
-apiVersion: image.toolkit.fluxcd.io/v1beta1
+apiVersion: image.toolkit.fluxcd.io/v1
 kind: ImagePolicy
 metadata:
   name: {{ include "app.fullName" . }}-image-policy
