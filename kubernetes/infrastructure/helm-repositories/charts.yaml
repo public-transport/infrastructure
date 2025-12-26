@@ -1,5 +1,5 @@
 # our own repo containing charts from /kubernetes/.charts
-apiVersion: source.toolkit.fluxcd.io/v1beta1
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: charts
