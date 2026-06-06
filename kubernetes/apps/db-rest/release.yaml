@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^3.2.1'
+      version: "^3.2.2"
   interval: 5m
   values:
     image:
@@ -22,7 +22,7 @@ spec:
     environment:
       PORT: 3000
     hosts:
-      - 'v5.db.api.bahn.guru'
+      - "v5.db.api.bahn.guru"
     replicas: 3
     livenessProbe: false
     startupProbe: false

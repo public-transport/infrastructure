@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^3.2.1'
+      version: "^3.2.2"
   interval: 5m
   values:
     image:
@@ -20,13 +20,13 @@ spec:
     exposedPort: 3000
     environment:
       PORT: 3000
-      API: 'bahn'
-      ANALYTICS: 'true'
+      API: "bahn"
+      ANALYTICS: "true"
     hosts:
-    - 'bahn.guru'
-    - 'www.bahn.guru'
-    - 'railway.guru'
-    - 'www.railway.guru'
+      - "bahn.guru"
+      - "www.bahn.guru"
+      - "railway.guru"
+      - "www.railway.guru"
     resources:
       limits:
         memory: 1024Mi
@@ -35,5 +35,5 @@ spec:
         memory: 512Mi
     replicas: 4
     minAvailable: 2
-    livenessProbe: '/impressum'
-    startupProbe: '/impressum'
+    livenessProbe: "/impressum"
+    startupProbe: "/impressum"

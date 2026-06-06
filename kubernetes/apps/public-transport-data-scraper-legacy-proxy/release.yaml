@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^3.2.1'
+      version: "^3.2.2"
   interval: 5m
   values:
     image:
@@ -21,6 +21,6 @@ spec:
     environment:
       PORT: 3000
     hosts:
-      - 'de.data.public-transport.earth'
+      - "de.data.public-transport.earth"
     livenessProbe: false
     startupProbe: false

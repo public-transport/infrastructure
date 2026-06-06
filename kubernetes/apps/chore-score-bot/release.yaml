@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^3.2.1'
+      version: "^3.2.2"
   interval: 5m
   values:
     hasSecrets: true
@@ -22,7 +22,7 @@ spec:
     environment:
       MONGODB_DATABASE: chore-score-bot
     hosts:
-    - 'chore-score-bot.juliustens.eu' # todo: remove this
+      - "chore-score-bot.juliustens.eu" # todo: remove this
     replicas: 1
     livenessProbe: false
     startupProbe: false

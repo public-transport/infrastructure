@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: charts
         namespace: flux-system
-      version: '^3.2.1'
+      version: "^3.2.2"
   interval: 5m
   values:
     image:
@@ -20,8 +20,8 @@ spec:
     exposedPort: 8080
     environment:
       PORT: 8080
-      SPARQL_ENDPOINT_URL: 'http://lod-codefor-de-api-service.lod-codefor-de-api:80/dataset/sparql'
+      SPARQL_ENDPOINT_URL: "http://lod-codefor-de-api-service.lod-codefor-de-api:80/dataset/sparql"
     hosts:
-      - 'lod.codefor.de'
+      - "lod.codefor.de"
     livenessProbe: false
     startupProbe: false
