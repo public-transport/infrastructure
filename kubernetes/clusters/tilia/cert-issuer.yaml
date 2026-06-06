@@ -10,4 +10,3 @@ spec:
     name: flux-system
   path: ./kubernetes/infrastructure/cert-issuer
   prune: true
-  validation: client

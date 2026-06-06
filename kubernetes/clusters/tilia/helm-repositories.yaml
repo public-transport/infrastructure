@@ -13,4 +13,3 @@ spec:
     name: flux-system
   path: ./kubernetes/infrastructure/helm-repositories
   prune: true
-  validation: client

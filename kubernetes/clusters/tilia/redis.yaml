@@ -13,4 +13,3 @@ spec:
     name: flux-system
   path: ./kubernetes/infrastructure/redis
   prune: true
-  validation: client
