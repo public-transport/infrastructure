@@ -10,5 +10,6 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   selector:
-    app: {{ include "app.fullName" . }}
+    matchLabels:
+      app: {{ include "app.fullName" . }}
   minAvailable: {{ .Values.minAvailable }}
