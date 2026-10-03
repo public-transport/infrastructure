@@ -1,0 +1,11 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: matrix-provider
+  namespace: flux-system
+spec:
+  type: matrix
+  address: https://matrix-client.matrix.org
+  channel: '!BrOcuAimg372NDQ8XPZFLZ7PitNLD5rOdKBePe5usSo'
+  secretRef:
+    name: matrix-token

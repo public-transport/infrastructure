@@ -1,11 +1,11 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Alert
 metadata:
-  name: slack-alert
+  name: matrix-alert
   namespace: flux-system
 spec:
   providerRef:
-    name: slack-provider
+    name: matrix-provider
   eventSeverity: error
   eventSources:
     - kind: Bucket

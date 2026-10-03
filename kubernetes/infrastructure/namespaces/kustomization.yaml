@@ -8,4 +8,4 @@ resources:
   - postgres.yaml
   - monitoring.yaml
   - app-releases.yaml
-  # when adding namespaces here, make sure to also add them in alerts/slack-alert.yaml
+  # when adding namespaces here, make sure to also add them in alerts/matrix-alert.yaml
