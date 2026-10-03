@@ -5,7 +5,7 @@ terraform {
       name = "infrastructure"
     }
   }
-  required_version = "~> 1.12"
+  required_version = "~> 1.16"
   required_providers {
     betteruptime = {
       source  = "BetterStackHQ/better-uptime"
@@ -13,23 +13,23 @@ terraform {
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 4.42"
+      version = "~> 4.52"
     }
     hcloud = {
       source  = "hetznercloud/hcloud"
-      version = "~> 1.52"
+      version = "~> 1.69"
     }
     flux = {
       source  = "fluxcd/flux"
-      version = "~> 1.8"
+      version = "~> 1.9"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.38"
+      version = "~> 3.3"
     }
     github = {
       source  = "integrations/github"
-      version = "~> 6.6"
+      version = "~> 6.13"
     }
   }
 }
