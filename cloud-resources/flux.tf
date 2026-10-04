@@ -29,7 +29,7 @@ resource "flux_bootstrap_git" "flux_tilia" {
   components_extra = ["image-reflector-controller", "image-automation-controller"]
 }
 
-resource "kubernetes_secret" "flux_encryption_key" {
+resource "kubernetes_secret_v1" "flux_encryption_key" {
   depends_on = [flux_bootstrap_git.flux_tilia]
   metadata {
     name      = "sops-gpg"
@@ -38,4 +38,16 @@ resource "kubernetes_secret" "flux_encryption_key" {
   data = {
     "sops.asc" = var.flux_encryption_private_key
   }
+}
+
+removed {
+  from = kubernetes_secret.flux_encryption_key
+  lifecycle {
+    destroy = false
+  }
+}
+
+import {
+  to = kubernetes_secret_v1.flux_encryption_key
+  id = "flux-system/sops-gpg"
 }

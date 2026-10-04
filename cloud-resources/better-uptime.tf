@@ -32,7 +32,7 @@ resource "betteruptime_status_page_resource" "bahn_guru_start" {
   resource_id    = betteruptime_monitor.bahn_guru_start.id
   resource_type  = "Monitor"
   public_name    = "bahn.guru (Start)"
-  history        = true
+  widget_type    = "history"
 }
 
 
@@ -48,7 +48,7 @@ resource "betteruptime_status_page_resource" "bahn_guru_calendar" {
   resource_id    = betteruptime_monitor.bahn_guru_calendar.id
   resource_type  = "Monitor"
   public_name    = "bahn.guru (Calendar)"
-  history        = true
+  widget_type    = "history"
 }
 
 
@@ -64,7 +64,7 @@ resource "betteruptime_status_page_resource" "bahn_guru_impressum" {
   resource_id    = betteruptime_monitor.bahn_guru_impressum.id
   resource_type  = "Monitor"
   public_name    = "bahn.guru (Impressum)"
-  history        = true
+  widget_type    = "history"
 }
 
 
@@ -84,5 +84,5 @@ resource "betteruptime_status_page_resource" "api_direkt_bahn_guru" {
   resource_id    = betteruptime_monitor.api_direkt_bahn_guru.id
   resource_type  = "Monitor"
   public_name    = "api.direkt.bahn.guru"
-  history        = true
+  widget_type    = "history"
 }
