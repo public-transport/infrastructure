@@ -6,12 +6,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: simple-app
+      chart: ./kubernetes/.charts/simple-app
       sourceRef:
-        kind: HelmRepository
-        name: charts
+        kind: GitRepository
+        name: flux-system
         namespace: flux-system
-      version: "^3.2.2"
   interval: 5m
   values:
     hasSecrets: true

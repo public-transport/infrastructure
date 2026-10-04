@@ -50,7 +50,7 @@ You only need to read this if you're interested in doing anything beyond deployi
 
 The basic structure of the `kubernetes` directory is as follows:
 
-- `.charts` contains our own custom helm charts, which help us to reduce code and complexity overall. These charts are automatically packaged and published by our CI using GitHub releases and GitHub pages
+- `.charts` contains our own custom helm charts, which help us to reduce code and complexity overall. Flux reads them directly from this repository, bump the chart version in `Chart.yaml` to roll out changes to all apps using it
 - `apps` contains all app-specific resources (except secrets)
 - `secrets` contains secrets encrypted with the public key in `secrets/.sops.pub.asc`
 - `infrastructure` contains underlying components required by most/all apps, such as tls certificate issuing or log collection
