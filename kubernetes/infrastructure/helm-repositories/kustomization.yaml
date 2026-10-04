@@ -3,4 +3,3 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - stakater.yaml
-  - prometheus-community.yaml

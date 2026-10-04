@@ -21,7 +21,6 @@ Furthermore, we make use of the [GitHub](https://registry.terraform.io/providers
 
 Some parts of our setup are not managed via terraform - sometimes because we just didn't have time/ambition to do so just yet, otherwise because some companies don't provide any terraform providers to manage their services.
 
-- [Grafana Cloud](https://grafana.com/products/cloud) - storage and dashboards for logging, metrics, etc.
 - [DigitalOcean](https://www.digitalocean.com/) - S3 bucket(s)
 
 ## Expenses and donations

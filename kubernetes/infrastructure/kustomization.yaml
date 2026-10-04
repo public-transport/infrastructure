@@ -6,5 +6,4 @@ resources:
   - cert-issuer
   - alerts
   - reloader
-  - monitoring
   - ../secrets/infrastructure
