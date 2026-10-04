@@ -39,15 +39,3 @@ resource "kubernetes_secret_v1" "flux_encryption_key" {
     "sops.asc" = var.flux_encryption_private_key
   }
 }
-
-removed {
-  from = kubernetes_secret.flux_encryption_key
-  lifecycle {
-    destroy = false
-  }
-}
-
-import {
-  to = kubernetes_secret_v1.flux_encryption_key
-  id = "flux-system/sops-gpg"
-}
