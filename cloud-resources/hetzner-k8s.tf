@@ -26,11 +26,11 @@ module "kube-hetzner" {
 
   k3s_channel = "stable"
 
-  # pinned to the versions running before the v3 upgrade, v3 would otherwise downgrade them
-  hetzner_ccm_version  = "1.38.0"
-  hetzner_csi_version  = "2.23.0"
-  traefik_version      = "41.1.1"
-  cert_manager_version = "v1.21.2"
+  # follow upstream releases, the v3 defaults are pinned to older versions
+  hetzner_ccm_version  = "latest"
+  hetzner_csi_version  = "latest"
+  traefik_version      = "latest"
+  cert_manager_version = "latest"
 
   # let kured reboot nodes one by one instead of restarting k3s everywhere at once (etcd quorum)
   kubernetes_config_updates_use_kured_sentinel = true
