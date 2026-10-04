@@ -13,7 +13,7 @@ terraform {
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 4.52"
+      version = "~> 5.26"
     }
     hcloud = {
       source  = "hetznercloud/hcloud"
