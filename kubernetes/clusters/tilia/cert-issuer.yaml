@@ -9,4 +9,4 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./kubernetes/infrastructure/cert-issuer
-  prune: true
+  prune: false

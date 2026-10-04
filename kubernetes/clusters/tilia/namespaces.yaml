@@ -13,4 +13,4 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./kubernetes/infrastructure/namespaces
-  prune: true
+  prune: false
