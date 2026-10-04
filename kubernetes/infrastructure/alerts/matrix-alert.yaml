@@ -26,18 +26,7 @@ spec:
       name: '*'
     - kind: HelmRelease
       name: '*'
-    - kind: HelmRelease
-      name: '*'
       namespace: 'app-releases'
-    - kind: HelmRelease
-      name: '*'
-      namespace: 'ingress-nginx'
-    - kind: HelmRelease
-      name: '*'
-      namespace: 'redis'
-    - kind: HelmRelease
-      name: '*'
-      namespace: 'postgres'
     - kind: HelmRelease
       name: '*'
       namespace: 'monitoring'
